@@ -9,7 +9,7 @@
   display: block;
   margin-top: 30px;
   margin-bottom: 30px;
-  padding-top: 60px;
+  padding-top: 40px;
   width: 100%;
   height: 250px;
   flex-shrink: 0;
@@ -33,7 +33,7 @@
   font-size: 38px;
   color: #323334;
   font-weight: 400;
-  margin-bottom: 45px;
+  margin-bottom: 25px;
 }
 * .fon_cr p {
   font-family: Roboto;
@@ -47,9 +47,17 @@
   /*display: flex;*/
   gap: 54px;
 }
+* .shop{
+  display: flex;
+  padding: 0;
+}
 * .nav {
-  position: sticky;
+  /*position: sticky;*/
   top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+* .nav_items{
   width: 250px;
 }
 * .nav h3 {
@@ -58,7 +66,6 @@
   font-weight: 800;
   line-height: normal;
   font-size: 20px;
-  margin-top: 10px;
   margin-bottom: 10px;
 }
 * .nav a {
@@ -114,6 +121,9 @@
 * .sec a {
   margin-left: 10px;
 }
+* .sec a:hover {
+  color: #F81111;
+}
 * .thi {
   display: flex;
   flex-direction: column;
@@ -162,7 +172,6 @@
 * .fou input:checked::before, * .six input:checked::before {
   content: "";
   position: absolute;
-  top: -3px;
   left: -2%;
   transform: translate(-50%, -50%);
   width: 12px;
@@ -189,7 +198,7 @@
 * .fiv #white:checked::before {
   content: "";
   position: absolute;
-  top: 9%;
+  top: 20%;
   left: 6%;
   transform: translate(-50%, -50%);
   width: 12px;
@@ -216,7 +225,7 @@
 * .fiv #black:checked::before {
   content: "";
   position: absolute;
-  top: 9%;
+  top: 20%;
   left: 6%;
   transform: translate(-50%, -50%);
   width: 12px;
@@ -243,7 +252,7 @@
 * .fiv #gray:checked::before {
   content: "";
   position: absolute;
-  top: 9%;
+  top: 20%;
   left: 6%;
   transform: translate(-50%, -50%);
   width: 12px;
@@ -270,7 +279,7 @@
 * .fiv #yellow:checked::before {
   content: "";
   position: absolute;
-  top: 9%;
+  top: 20%;
   left: 6%;
   transform: translate(-50%, -50%);
   width: 12px;
@@ -297,7 +306,7 @@
 * .fiv #orange:checked::before {
   content: "";
   position: absolute;
-  top: 9%;
+  top: 20%;
   left: 6%;
   transform: translate(-50%, -50%);
   width: 12px;
@@ -324,7 +333,7 @@
 * .fiv #red:checked::before {
   content: "";
   position: absolute;
-  top: 9%;
+  top: 20%;
   left: 6%;
   transform: translate(-50%, -50%);
   width: 12px;
@@ -351,7 +360,7 @@
 * .fiv #salptovy:checked::before {
   content: "";
   position: absolute;
-  top: 9%;
+  top: 20%;
   left: 6%;
   transform: translate(-50%, -50%);
   width: 12px;
@@ -378,7 +387,7 @@
 * .fiv #green:checked::before {
   content: "";
   position: absolute;
-  top: 9%;
+  top: 20%;
   left: 6%;
   transform: translate(-50%, -50%);
   width: 12px;
@@ -405,7 +414,7 @@
 * .fiv #pink:checked::before {
   content: "";
   position: absolute;
-  top: 9%;
+  top: 20%;
   left: 6%;
   transform: translate(-50%, -50%);
   width: 12px;
@@ -432,7 +441,7 @@
 * .fiv #purple:checked::before {
   content: "";
   position: absolute;
-  top: 9%;
+  top: 20%;
   left: 6%;
   transform: translate(-50%, -50%);
   width: 12px;
@@ -459,7 +468,7 @@
 * .fiv #blue:checked::before {
   content: "";
   position: absolute;
-  top: 9%;
+  top: 20%;
   left: 6%;
   transform: translate(-50%, -50%);
   width: 12px;
@@ -486,7 +495,7 @@
 * .fiv #darkblue:checked::before {
   content: "";
   position: absolute;
-  top: 9%;
+  top: 20%;
   left: 6%;
   transform: translate(-50%, -50%);
   width: 12px;

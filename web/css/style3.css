@@ -17,10 +17,10 @@
   gap: 50px;
 }
 * .inf .inf_first img {
-  width: 400px;
+  /*width: 400px;*/
   height: 525px;
-  margin-left: -10px;
-  margin-right: 10px;
+  /*margin-left: -10px;*/
+  margin-right: 15px;
 }
 * .inf .inf_second h2 {
   font-family: Roboto;
@@ -29,7 +29,7 @@
   line-height: normal;
   font-size: 28px;
   color: #323334;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 * .inf .inf_second p {
   font-family: Roboto;
@@ -77,18 +77,19 @@
   justify-content: center;
   cursor: pointer;
   border: none;
-  margin-top: 20px;
-  width: 540px;
+  margin-top: 23px;
+  width: 460px;
   height: 50px;
   padding-top: 18px;
   background-color: #323334;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
+  margin-left: 0;
+  margin-right: 0;
 }
 * .inf .inf_second .con {
   width: 460px;
-  height: 115px;
   background-color: #F9F9F8;
   padding-top: 30px;
   padding-left: 40px;
@@ -148,14 +149,14 @@
   width: 20px;
   height: 40px;
   border: none;
-  background: url(img/left.svg);
+  background: url(../img/left.svg);
   font-size: 0;
 }
 * .owl-carousel-item .owl-nav .owl-next {
   width: 23px;
   height: 40px;
   border: none;
-  background: url(img/right.svg);
+  background: url(../img/right.svg);
   font-size: 0;
 }
 * .owl-carousel-item .owl-dots {

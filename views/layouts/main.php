@@ -39,68 +39,51 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             <li><a href="<?= Url::to(['/site/cart']) ?>"><img width="24px" height="28px" src="img/cart.svg" alt=""></a></li>
             <li class="like"><a href="<?= Url::to(['/site/like']) ?>"><img width="29px" height="29px" src="img/like.svg" alt=""></a></li>
             <li>
-                <?php
-//                echo ButtonDropdown::widget([
-//                    'label' => 'Вход',
-//                    'dropdown' => [
-//                        'items' => [
-//                            ['label' => 'Регистрация', 'url' => ['/site/signup'], 'visible' => Yii::$app->user->isGuest],
-//                            Yii::$app->user->isGuest ? (
-//                            ['label' => 'Войти', 'url' => ['/site/login']]
-//                            ) : (
-//                                '<li>'
-//                                . Html::beginForm(['/site/logout'], 'post')
-//                                . Html::submitButton(
-//                                    'Выйти (' . Yii::$app->user->identity->username . ')',
-//                                    ['class' => 'btn btn-link logout']
-//                                )
-//                                . Html::endForm()
-//                                . '</li>'
-//                            ),
-//                        ],
-//                    ],
-//                ]);
+                <a href="#" id="userLink" style="display: block">
+                    <img width="22px" height="29px" src="img/user.svg" alt="">
+                </a>
 
-                    echo ButtonDropdown::widget([
-                        'label' => 'Вход',
-                        'dropdown' => [
-                            'items' => [
-                                ['label' => 'Регистрация', 'url' => ['/site/signup'], 'visible' => Yii::$app->user->isGuest],
-                                Yii::$app->user->isGuest ? (
-                                ['label' => 'Войти', 'url' => ['/site/login']]
-                                ) : (
-                                    '<li>'
-                                    . Html::beginForm(['/site/logout'], 'post')
-                                    . Html::submitButton(
-                                        'Выйти (' . Yii::$app->user->identity->username . ')',
-                                        ['class' => 'btn btn-link logout']
-                                    )
-                                    . Html::endForm()
-                                    . '</li>'
-                                ),
-                            ],
-                        ],
+                <div id="dropdownMenu" class="dropdown-menu">
+                    <?php
+                    $menuItems = [];
+                    if (Yii::$app->user->isGuest) {
+                        $menuItems[] = ['label' => 'Sign Up', 'url' => ['/site/signup']];
+                        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+                    } else {
+                        $menuItems[] = '<li>'
+                            . Html::beginForm(['/site/info'], 'post')
+                            . Html::submitButton(
+                                '' . Yii::$app->user->identity->username . '',
+                                ['class' => 'btn btn-link']
+                            )
+                            . Html::endForm()
+
+                            . Html::beginForm(['/site/logout'], 'post')
+                            . Html::submitButton(
+                                'Login out',
+                                ['class' => 'btn btn-link logout']
+                            )
+                            . Html::endForm()
+                            . '</li>';
+                    }
+
+                    echo Nav::widget([
+                        'options' => ['class' => 'navbar-nav'],
+                        'items' => $menuItems,
                     ]);
-                ?>
+                    ?>
+                </div>
             </li>
         </ul>
     </div>
 </header>
 
 <header class="container">
-<!--    <div class="head1">-->
-<!--        <a href="" class="name">MOODY STUDIO</a>-->
-<!--        <ul class="ul_main">-->
-<!--            <li><a href="cart.php"><img width="24px" height="28px" src="img/cart.svg" alt=""></a></li>-->
-<!--            <li class="like"><a href=""><img width="29px" height="29px" src="img/like.svg" alt=""></a></li>-->
-<!--            <li><a href=""><img width="22px" height="29px" src="img/user.svg" alt=""></a></li>-->
-<!--        </ul>-->
-<!--    </div>-->
     <div class="head2">
         <ul>
             <li><a href="<?= Url::to(['/site/index']) ?>"><h3>HOME</h3></a></li>
-            <li><a href=""><h3>STORE</h3></a></li>
-            <li><a href=""><h3>ACCESSORIES</h3></a></li>
+            <li><a href="<?= Url::to(['/site/store']) ?>"><h3>STORE</h3></a></li>
+            <li><a href="<?= Url::to(['/site/store']) ?>"><h3>ACCESSORIES</h3></a></li>
             <li><a href="#fot"><h3>BRAND</h3></a></li>
             <li><a href="#fot"><h3>PAGES</h3></a></li>
             <li><a href="#fot"><h3>ABOUT US</h3></a></li>
@@ -109,45 +92,6 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
         </ul>
     </div>
 </header>
-
-
-<!--<header id="header">-->
-<!--    --><?php
-//    NavBar::begin([
-//        'brandLabel' => Yii::$app->name,
-//        'brandUrl' => Yii::$app->homeUrl,
-//    ]);
-//    echo Nav::widget([
-//        'options' => ['class' => 'navbar-nav navbar-right'],
-//        'items' => [
-//            ['label' => 'Корзина', 'url' => ['/site/cart']],
-//            ['label' => 'Понравилось', 'url' => ['/site/like']],
-//        ]]);
-//
-//            echo ButtonDropdown::widget([
-//                'label' => 'Вход',
-//                'dropdown' => [
-//                    'items' => [
-//                        ['label' => 'Регистрация', 'url' => ['/site/signup'], 'visible' => Yii::$app->user->isGuest],
-//                        Yii::$app->user->isGuest ? (
-//                        ['label' => 'Войти', 'url' => ['/site/login']]
-//                        ) : (
-//                            '<li>'
-//                            . Html::beginForm(['/site/logout'], 'post')
-//                            . Html::submitButton(
-//                                'Выйти (' . Yii::$app->user->identity->username . ')',
-//                                ['class' => 'btn btn-link logout']
-//                            )
-//                            . Html::endForm()
-//                            . '</li>'
-//                        ),
-//                    ],
-//                ],
-//            ]);
-//
-//    NavBar::end();
-//    ?>
-<!--</header>-->
 
 <main id="main" class="flex-shrink-0" role="main">
     <div>
@@ -205,7 +149,6 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 <div class="fon4">
     <p>MOODY STUDIO © – All rights reserved</p>
 </div>
-
 
 <?php $this->endBody() ?>
 </body>

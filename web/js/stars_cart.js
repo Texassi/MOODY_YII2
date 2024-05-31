@@ -1,18 +1,14 @@
-const ratings = document.querySelectorAll('.rating2');
-ratings.forEach(rating => {
-    const stars = rating.querySelectorAll('.star');
-    stars.forEach(star => {
-        star.addEventListener('click', function() {
-            const ratingValue = this.getAttribute('data-value');
-            this.classList.add('filled');
+document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('star')) {
+        const stars = event.target.parentElement.querySelectorAll('.star');
+        const ratingValue = event.target.getAttribute('data-value');
 
-            for (let i = 0; i < ratingValue; i++) {
-                stars[i].classList.add('filled');
-            }
-
-            for (let i = ratingValue; i < stars.length; i++) {
-                stars[i].classList.remove('filled');
+        stars.forEach((star, index) => {
+            if (index < ratingValue) {
+                star.classList.add('filled');
+            } else {
+                star.classList.remove('filled');
             }
         });
-    });
+    }
 });

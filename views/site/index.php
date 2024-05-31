@@ -2,6 +2,8 @@
 
 /** @var yii\web\View $this */
 
+use yii\helpers\Url;
+
 $this->title = 'MOODY.S';
 ?>
 <div class="site-index">
@@ -161,7 +163,7 @@ $this->title = 'MOODY.S';
                     <div class="image-container">
                         <img src="img/dec1.svg" alt="">
                         <div class="popup">
-                            <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                            <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                             <img src="img/l.svg" alt="" height="25px">
                             <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                         </div>
@@ -186,7 +188,7 @@ $this->title = 'MOODY.S';
                     <div class="image-container">
                         <img src="img/dec2.svg" alt="">
                         <div class="popup">
-                            <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                            <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                             <img src="img/l.svg" alt="" height="25px">
                             <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                         </div>
@@ -211,7 +213,7 @@ $this->title = 'MOODY.S';
                     <div class="image-container">
                         <img src="img/dec3.svg" alt="">
                         <div class="popup">
-                            <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                            <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                             <img src="img/l.svg" alt="" height="25px">
                             <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                         </div>
@@ -238,7 +240,7 @@ $this->title = 'MOODY.S';
                     <div class="image-container">
                         <img src="img/dec4.svg" alt="">
                         <div class="popup">
-                            <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                            <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                             <img src="img/l.svg" alt="" height="25px">
                             <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                         </div>
@@ -263,7 +265,7 @@ $this->title = 'MOODY.S';
                     <div class="image-container">
                         <img src="img/dec5.svg" alt="">
                         <div class="popup">
-                            <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                            <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                             <img src="img/l.svg" alt="" height="25px">
                             <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                         </div>
@@ -288,7 +290,7 @@ $this->title = 'MOODY.S';
                     <div class="image-container">
                         <img src="img/dec6.svg" alt="">
                         <div class="popup">
-                            <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                            <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                             <img src="img/l.svg" alt="" height="25px">
                             <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                         </div>
@@ -361,7 +363,7 @@ $this->title = 'MOODY.S';
                             </div>
                             <h2>30$</h2>
                             <div class="popup">
-                                <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                                <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                                 <img src="img/l.svg" alt="" height="25px">
                                 <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                             </div>
@@ -384,7 +386,7 @@ $this->title = 'MOODY.S';
                             </div>
                             <h2>30$</h2>
                             <div class="popup">
-                                <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                                <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                                 <img src="img/l.svg" alt="" height="25px">
                                 <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                             </div>
@@ -407,7 +409,7 @@ $this->title = 'MOODY.S';
                             </div>
                             <h2>30$</h2>
                             <div class="popup">
-                                <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                                <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                                 <img src="img/l.svg" alt="" height="25px">
                                 <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                             </div>
@@ -430,7 +432,7 @@ $this->title = 'MOODY.S';
                             </div>
                             <h2>30$</h2>
                             <div class="popup">
-                                <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                                <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                                 <img src="img/l.svg" alt="" height="25px">
                                 <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                             </div>
@@ -453,7 +455,7 @@ $this->title = 'MOODY.S';
                             </div>
                             <h2>30$</h2>
                             <div class="popup">
-                                <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                                <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                                 <img src="img/l.svg" alt="" height="25px">
                                 <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                             </div>
@@ -476,7 +478,7 @@ $this->title = 'MOODY.S';
                             </div>
                             <h2>30$</h2>
                             <div class="popup">
-                                <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                                <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                                 <img src="img/l.svg" alt="" height="25px">
                                 <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                             </div>
@@ -499,7 +501,7 @@ $this->title = 'MOODY.S';
                             </div>
                             <h2>30$</h2>
                             <div class="popup">
-                                <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                                <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                                 <img src="img/l.svg" alt="" height="25px">
                                 <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                             </div>
@@ -522,7 +524,7 @@ $this->title = 'MOODY.S';
                             </div>
                             <h2>30$</h2>
                             <div class="popup">
-                                <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                                <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                                 <img src="img/l.svg" alt="" height="25px">
                                 <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                             </div>
@@ -545,7 +547,7 @@ $this->title = 'MOODY.S';
                             </div>
                             <h2>30$</h2>
                             <div class="popup">
-                                <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                                <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                                 <img src="img/l.svg" alt="" height="25px">
                                 <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                             </div>
@@ -568,7 +570,7 @@ $this->title = 'MOODY.S';
                             </div>
                             <h2>30$</h2>
                             <div class="popup">
-                                <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                                <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                                 <img src="img/l.svg" alt="" height="25px">
                                 <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                             </div>
@@ -591,7 +593,7 @@ $this->title = 'MOODY.S';
                             </div>
                             <h2>30$</h2>
                             <div class="popup">
-                                <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                                <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                                 <img src="img/l.svg" alt="" height="25px">
                                 <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                             </div>
@@ -614,7 +616,7 @@ $this->title = 'MOODY.S';
                             </div>
                             <h2>30$</h2>
                             <div class="popup">
-                                <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                                <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                                 <img src="img/l.svg" alt="" height="25px">
                                 <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                             </div>

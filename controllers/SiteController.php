@@ -74,6 +74,20 @@ class SiteController extends Controller
         return $this->render('like');
     }
 
+    public function actionStore(){
+        return $this->render('store');
+    }
+
+    public function actionItem()
+    {
+        return $this->render('item');
+    }
+
+    public function actionInfo()
+    {
+        return $this->render('info');
+    }
+
     /**
      * Login action.
      *
