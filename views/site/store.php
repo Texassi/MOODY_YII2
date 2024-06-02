@@ -5,9 +5,9 @@
     <p>Not a member? JOIN NOW TO SHOP.</p>
 </div>
 
+<p style="height: 0.1px;"><a name="top"></a></p>
 <main class="shop container">
     <div class="nav nav_items">
-        <p style="height: 0.1px;"><a name="top"></a></p>
         <div class="fir">
             <h3>New arrivals</h3>
             <a href="">New Arrivals</a>
@@ -132,6 +132,12 @@
         </div>
     </div>
     <div class="cart-shop">
+        <div class="d5">
+            <form>
+                <input type="text" placeholder="Search...">
+                <button type="submit"></button>
+            </form>
+        </div>
         <h1>BEDROOM</h1>
         <p>It`s easy to transform your bedroom interior with our great selection of accessories.</p>
         <div id="products">
