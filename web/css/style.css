@@ -9,6 +9,284 @@
   margin-right: auto;
 }
 
+
+* body .kor {
+  margin-top: 20px;
+}
+* body .kor .kor-name {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  justify-content: center;
+}
+* body .kor .kor-con {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+* body .kor h1 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  font-size: 28px;
+  padding: 0;
+  margin-bottom: 30px;
+}
+* body .kor .kor-f {
+  display: flex;
+  flex-direction: column;
+}
+* body .kor .kor-f .sec-kor {
+  display: flex;
+  width: 653px;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+
+* body .kor .kor-f .sec-kor img {
+  height: 200px;
+}
+* body .kor .kor-f .sec-kor .kors-1 {
+  display: flex;
+  gap: 20px;
+}
+* body .kor .kor-f .sec-kor h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  line-height: normal;
+  font-size: 18px;
+  font-weight: 800;
+  padding: 0;
+  margin-bottom: 10px;
+  color: #323334;
+}
+* body .kor .kor-f .sec-kor h1 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  line-height: normal;
+  font-size: 22px;
+  font-weight: 800;
+  padding: 0;
+  margin-bottom: 20px;
+  color: #323334;
+}
+* body .kor .kor-f .sec-kor p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  font-size: 18px;
+  font-weight: lighter;
+  color: #323334;
+  margin-bottom: 10px;
+}
+* body .kor .kor-f .sec-kor .about_kor {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 8px;
+}
+* body .kor .kor-f .sec-kor .btns-kor {
+  display: flex;
+  height: 30px;
+  gap: 30px;
+  /* not necessary*/
+}
+* body .kor .kor-f .sec-kor .btns-kor button {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #323334;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+* body .kor .kor-f .sec-kor .btns-kor button img {
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
+}
+* body .kor .kor-f .sec-kor .btns-kor input[type=number]::-webkit-inner-spin-button,
+* body .kor .kor-f .sec-kor .btns-kor input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+* body .kor .kor-f .sec-kor .btns-kor input[type=number] {
+  -moz-appearance: textfield;
+}
+* body .kor .kor-f .sec-kor .btns-kor * {
+  margin: 0;
+  padding: 0;
+}
+* body .kor .kor-f .sec-kor .btns-kor body {
+  display: flex;
+  min-height: 100vh;
+}
+* body .kor .kor-f .sec-kor .btns-kor .quantity-block {
+  margin: auto;
+  font-size: 20px;
+}
+* body .kor .kor-f .sec-kor .btns-kor .quantity-arrow-minus,
+* body .kor .kor-f .sec-kor .btns-kor .quantity-arrow-plus {
+  cursor: pointer;
+  font-size: 20px;
+  padding: 5px 12px;
+  width: 40px;
+  box-sizing: border-box;
+  border: 2px solid #323334;
+  outline: none;
+}
+* body .kor .kor-f .sec-kor .btns-kor .quantity-num {
+  font-size: 20px;
+  height: 49.9px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 2px solid #323334;
+  outline: none;
+  width: 57px;
+}
+* body .kor .kor-f .sec-kor .kre_kor button {
+  width: 20px;
+  height: 20px;
+  border: 0;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+* body .kor .kor-f .sec-kor .kre_kor button img {
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
+}
+* body .kor .kor-f .kor-tot {
+  display: flex;
+  flex-direction: column;
+  width: 653px;
+  text-align: right;
+}
+* body .kor .kor-f .kor-tot h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  line-height: normal;
+  font-size: 20px;
+  font-weight: 800;
+  padding: 0;
+  margin-bottom: 10px;
+  color: #323334;
+}
+* body .kor .kor-f .kor-tot .line-kor {
+  border: 1px solid #323334;
+  margin-bottom: 10px;
+}
+* body .kor .kor-s {
+  display: flex;
+  flex-direction: column;
+  background-color: #ECEBE9;
+  padding: 60px 50px;
+  height: 343px;
+}
+* body .kor .kor-s h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: lighter;
+  line-height: normal;
+  font-size: 20px;
+  padding: 0;
+  margin-bottom: 5px;
+}
+* body .kor .kor-s form {
+  display: flex;
+  height: 40px;
+  padding-bottom: 10px;
+}
+* body .kor .kor-s #inp {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  width: 300px;
+  font-weight: 400;
+  padding: 15px 30px;
+  border-radius: 0;
+  border: 2px solid #000;
+}
+* body .kor .kor-s #inp:focus {
+  outline: none;
+}
+* body .kor .kor-s #but {
+  width: 50px;
+  height: 33.9px;
+  padding: 10px 10px;
+  background-color: #323334;
+}
+* body .kor .kor-s .ord-kor {
+  display: flex;
+  justify-content: space-between;
+}
+* body .kor .kor-s .ord-kor p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: #323334;
+  font-size: 16px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+* body .kor .kor-s .ord-kor .p2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: #323334;
+  font-size: 18px;
+  padding-bottom: 5px;
+  margin-top: 10px;
+}
+* body .kor .kor-s button {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  height: 50px;
+  padding-top: 15px;
+  margin-bottom: 0;
+  background-color: #323334;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+* body .add-like {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  width: 350px;
+  height: 50px;
+  padding-top: 18px;
+  background-color: #323334;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 .d5 form {
   position: relative;
   width: 100%;
@@ -63,13 +341,13 @@
   font-weight: 400;
 }
 * body .ords h1 {
-  font-family: Roboto;
   font-style: normal;
   font-weight: 800;
   line-height: normal;
   line-height: normal;
   font-size: 28px;
   font-weight: 800;
+  font-family: Roboto;
   padding: 0;
   margin-bottom: 10px;
 }
@@ -87,18 +365,17 @@
 * body .orders .ords {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
+  gap: 20px;
 }
 * body .orders .ord {
   display: flex;
   flex-direction: column;
-  width: 400px;
-  height: auto;
+  width: auto;
+  min-height: auto;
   border: 2px solid #222222;
   border-radius: 10px;
-  margin-bottom: 25px;
   padding: 20px;
 }
 * body .orders p {
@@ -114,10 +391,10 @@
 * body .orders .karts {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 * body .orders .kart .tov {
   height: 100px;
-  border: 2px solid #222222;
   margin-bottom: 10px;
 }
 * body .orders .kart p {
@@ -821,7 +1098,7 @@
   font-weight: 400;
   padding: 15px 30px;
   border-radius: 0;
-  border: 1px solid #000;
+  border: 2px solid #000;
 }
 * body .forma form #email:focus {
   outline: none;

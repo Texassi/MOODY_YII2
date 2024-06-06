@@ -36,6 +36,30 @@
                     <img class="tov" src="img/dec1.svg" alt="">
                     <p>Checked Duvet Cover Set</p>
                 </div>
+                <div class="kart">
+                    <img class="tov" src="img/dec1.svg" alt="">
+                    <p>Checked Duvet Cover Set</p>
+                </div>
+                <div class="kart">
+                    <img class="tov" src="img/dec1.svg" alt="">
+                    <p>Checked Duvet Cover Set</p>
+                </div>
+                <div class="kart">
+                    <img class="tov" src="img/dec1.svg" alt="">
+                    <p>Checked Duvet Cover Set</p>
+                </div>
+                <div class="kart">
+                    <img class="tov" src="img/dec1.svg" alt="">
+                    <p>Checked Duvet Cover Set</p>
+                </div>
+                <div class="kart">
+                    <img class="tov" src="img/dec1.svg" alt="">
+                    <p>Checked Duvet Cover Set</p>
+                </div>
+                <div class="kart">
+                    <img class="tov" src="img/dec1.svg" alt="">
+                    <p>Checked Duvet Cover Set</p>
+                </div>
             </div>
         </div>
         <div class="ord">
@@ -50,7 +74,57 @@
                     <img class="tov" src="img/dec1.svg" alt="">
                     <p>Checked Duvet Cover Set</p>
                 </div>
+                <div class="kart">
+                    <img class="tov" src="img/dec1.svg" alt="">
+                    <p>Checked Duvet Cover Set</p>
+                </div>
+                <div class="kart">
+                    <img class="tov" src="img/dec1.svg" alt="">
+                    <p>Checked Duvet Cover Set</p>
+                </div>
+                <div class="kart">
+                    <img class="tov" src="img/dec1.svg" alt="">
+                    <p>Checked Duvet Cover Set</p>
+                </div>
+                <div class="kart">
+                    <img class="tov" src="img/dec1.svg" alt="">
+                    <p>Checked Duvet Cover Set</p>
+                </div>
+                <div class="kart">
+                    <img class="tov" src="img/dec1.svg" alt="">
+                    <p>Checked Duvet Cover Set</p>
+                </div>
+                <div class="kart">
+                    <img class="tov" src="img/dec1.svg" alt="">
+                    <p>Checked Duvet Cover Set</p>
+                </div>
+                <div class="kart">
+                    <img class="tov" src="img/dec1.svg" alt="">
+                    <p>Checked Duvet Cover Set</p>
+                </div>
+                <div class="kart">
+                    <img class="tov" src="img/dec1.svg" alt="">
+                    <p>Checked Duvet Cover Set</p>
+                </div>
+                <div class="kart">
+                    <img class="tov" src="img/dec1.svg" alt="">
+                    <p>Checked Duvet Cover Set</p>
+                </div>
+                <div class="kart">
+                    <img class="tov" src="img/dec1.svg" alt="">
+                    <p>Checked Duvet Cover Set</p>
+                </div>
+                <div class="kart">
+                    <img class="tov" src="img/dec1.svg" alt="">
+                    <p>Checked Duvet Cover Set</p>
+                </div>
+                <div class="kart">
+                    <img class="tov" src="img/dec1.svg" alt="">
+                    <p>Checked Duvet Cover Set</p>
+                </div>
             </div>
         </div>
     </div>
+</div>
+<div style="margin-bottom: 20px">
 </div>
