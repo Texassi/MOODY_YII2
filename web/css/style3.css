@@ -29,7 +29,7 @@
   line-height: normal;
   font-size: 28px;
   color: #323334;
-  margin-bottom: 12px;
+  margin-bottom: 5px;
 }
 * .inf .inf_second p {
   font-family: Roboto;
@@ -45,7 +45,7 @@
   width: 53px;
   height: 72px;
   border: 2px solid #323334;
-  margin-top: 15px;
+  margin-top: 12px;
   margin-bottom: 15px;
 }
 * .inf .inf_second .del {
@@ -108,6 +108,7 @@
   font-size: 16px;
   color: #323334;
   font-weight: 400;
+  margin-bottom: 15px;
 }
 * .inf .inf_second .con .com {
   font-family: Roboto;
@@ -117,7 +118,8 @@
   font-size: 18px;
   color: rgba(0, 0, 0, 0.5);
   font-weight: 100;
-  margin-top: 15px;
+  margin-top: 6px;
+  margin-bottom: 0;
 }
 * .owl-carousel-item {
   width: 1196px;

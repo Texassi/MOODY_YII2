@@ -17,111 +17,150 @@
                 <div class="kart">
                     <img class="tov" src="img/dec1.svg" alt="">
                     <p>Checked Duvet Cover Set</p>
+                    <p class="p2">30$</p>
                 </div>
                 <div class="kart">
                     <img class="tov" src="img/dec1.svg" alt="">
                     <p>Checked Duvet Cover Set</p>
+                    <p class="p2">30$</p>
                 </div>
                 <div class="kart">
                     <img class="tov" src="img/dec1.svg" alt="">
                     <p>Checked Duvet Cover Set</p>
+                    <p class="p2">30$</p>
                 </div>
+            </div>
+            <div class="inf-tot">
+                <h2>Total</h2>
+                <div class="line-inf"></div>
+                <h2>500$</h2>
             </div>
         </div>
         <div class="ord">
-            <h1>Order #345</h1>
+            <h1>Order #346</h1>
             <p>20.05.2024</p>
             <div class="karts">
                 <div class="kart">
                     <img class="tov" src="img/dec1.svg" alt="">
                     <p>Checked Duvet Cover Set</p>
+                    <p class="p2">30$</p>
                 </div>
                 <div class="kart">
                     <img class="tov" src="img/dec1.svg" alt="">
                     <p>Checked Duvet Cover Set</p>
+                    <p class="p2">30$</p>
                 </div>
                 <div class="kart">
                     <img class="tov" src="img/dec1.svg" alt="">
                     <p>Checked Duvet Cover Set</p>
+                    <p class="p2">30$</p>
                 </div>
                 <div class="kart">
                     <img class="tov" src="img/dec1.svg" alt="">
                     <p>Checked Duvet Cover Set</p>
+                    <p class="p2">30$</p>
                 </div>
                 <div class="kart">
                     <img class="tov" src="img/dec1.svg" alt="">
                     <p>Checked Duvet Cover Set</p>
+                    <p class="p2">30$</p>
                 </div>
                 <div class="kart">
                     <img class="tov" src="img/dec1.svg" alt="">
                     <p>Checked Duvet Cover Set</p>
+                    <p class="p2">30$</p>
                 </div>
                 <div class="kart">
                     <img class="tov" src="img/dec1.svg" alt="">
                     <p>Checked Duvet Cover Set</p>
+                    <p class="p2">30$</p>
                 </div>
+            </div>
+            <div class="inf-tot">
+                <h2>Total</h2>
+                <div class="line-inf"></div>
+                <h2>500$</h2>
             </div>
         </div>
         <div class="ord">
-            <h1>Order #344</h1>
+            <h1>Order #346</h1>
             <p>20.05.2024</p>
             <div class="karts">
                 <div class="kart">
                     <img class="tov" src="img/dec1.svg" alt="">
                     <p>Checked Duvet Cover Set</p>
+                    <p class="p2">30$</p>
                 </div>
                 <div class="kart">
                     <img class="tov" src="img/dec1.svg" alt="">
                     <p>Checked Duvet Cover Set</p>
+                    <p class="p2">30$</p>
                 </div>
                 <div class="kart">
                     <img class="tov" src="img/dec1.svg" alt="">
                     <p>Checked Duvet Cover Set</p>
+                    <p class="p2">30$</p>
                 </div>
                 <div class="kart">
                     <img class="tov" src="img/dec1.svg" alt="">
                     <p>Checked Duvet Cover Set</p>
+                    <p class="p2">30$</p>
                 </div>
                 <div class="kart">
                     <img class="tov" src="img/dec1.svg" alt="">
                     <p>Checked Duvet Cover Set</p>
+                    <p class="p2">30$</p>
                 </div>
                 <div class="kart">
                     <img class="tov" src="img/dec1.svg" alt="">
                     <p>Checked Duvet Cover Set</p>
+                    <p class="p2">30$</p>
                 </div>
                 <div class="kart">
                     <img class="tov" src="img/dec1.svg" alt="">
                     <p>Checked Duvet Cover Set</p>
+                    <p class="p2">30$</p>
                 </div>
                 <div class="kart">
                     <img class="tov" src="img/dec1.svg" alt="">
                     <p>Checked Duvet Cover Set</p>
+                    <p class="p2">30$</p>
                 </div>
                 <div class="kart">
                     <img class="tov" src="img/dec1.svg" alt="">
                     <p>Checked Duvet Cover Set</p>
+                    <p class="p2">30$</p>
                 </div>
                 <div class="kart">
                     <img class="tov" src="img/dec1.svg" alt="">
                     <p>Checked Duvet Cover Set</p>
+                    <p class="p2">30$</p>
                 </div>
                 <div class="kart">
                     <img class="tov" src="img/dec1.svg" alt="">
                     <p>Checked Duvet Cover Set</p>
+                    <p class="p2">30$</p>
                 </div>
                 <div class="kart">
                     <img class="tov" src="img/dec1.svg" alt="">
                     <p>Checked Duvet Cover Set</p>
+                    <p class="p2">30$</p>
                 </div>
                 <div class="kart">
                     <img class="tov" src="img/dec1.svg" alt="">
                     <p>Checked Duvet Cover Set</p>
+                    <p class="p2">30$</p>
                 </div>
                 <div class="kart">
                     <img class="tov" src="img/dec1.svg" alt="">
                     <p>Checked Duvet Cover Set</p>
+                    <p class="p2">30$</p>
                 </div>
+            </div>
+            <div class="inf-tot">
+                <h2>Total</h2>
+                <div class="line-inf"></div>
+                <h2>500$</h2>
             </div>
         </div>
     </div>

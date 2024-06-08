@@ -1,4 +1,4 @@
-<?php ?>
+<?php use yii\helpers\Url; ?>
 <div class="fon_cr">
     <h2 class="h2_1">Member Exclusive</h2>
     <h2 class="h2_2">15% off everything + extra $10 off for plus status</h2>
@@ -13,56 +13,51 @@
             <a href="">New Arrivals</a>
         </div>
         <div class="sec">
-            <h3>New arrivals</h3>
+            <h3>Shop by room</h3>
             <a id="mainButton1">Bedroom</a>
             <div id="buttonList1" class="hidden">
-                <div><a href="">Duvet cover sets</a></div>
-                <div><a href="">Sheets</a></div>
-                <div><a href="">Bedspreads</a></div>
-                <div><a href="">Blankets</a></div>
-                <div><a href="">Curtains</a></div>
-                <div><a href="">Pillowcases</a></div>
-                <div><a href="">Rugs</a></div>
+                <div><a href="">Large furniture</a></div>
+                <div><a href="">Small furniture</a></div>
+                <div><a href="">Dishes</a></div>
+                <div><a href="">Storage</a></div>
+                <div><a href="">Accessories</a></div>
+                <div><a href="">Soft/Fabric</a></div>
             </div>
             <a id="mainButton2">Living room</a>
             <div id="buttonList2" class="hidden">
-                <div><a href="">Duvet cover sets</a></div>
-                <div><a href="">Sheets</a></div>
-                <div><a href="">Bedspreads</a></div>
-                <div><a href="">Blankets</a></div>
-                <div><a href="">Curtains</a></div>
-                <div><a href="">Pillowcases</a></div>
-                <div><a href="">Rugs</a></div>
+                <div><a href="">Large furniture</a></div>
+                <div><a href="">Small furniture</a></div>
+                <div><a href="">Dishes</a></div>
+                <div><a href="">Storage</a></div>
+                <div><a href="">Accessories</a></div>
+                <div><a href="">Soft/Fabric</a></div>
             </div>
             <a id="mainButton3">Child room</a>
             <div id="buttonList3" class="hidden">
-                <div><a href="">Duvet cover sets</a></div>
-                <div><a href="">Sheets</a></div>
-                <div><a href="">Bedspreads</a></div>
-                <div><a href="">Blankets</a></div>
-                <div><a href="">Cutains</a></div>
-                <div><a href="">Pillowcases</a></div>
-                <div><a href="">Rugs</a></div>
+                <div><a href="">Large furniture</a></div>
+                <div><a href="">Small furniture</a></div>
+                <div><a href="">Dishes</a></div>
+                <div><a href="">Storage</a></div>
+                <div><a href="">Accessories</a></div>
+                <div><a href="">Soft/Fabric</a></div>
             </div>
             <a id="mainButton4">Bathroom</a>
             <div id="buttonList4" class="hidden">
-                <div><a href="">Duvet cover sets</a></div>
-                <div><a href="">Sheets</a></div>
-                <div><a href="">Bedspreads</a></div>
-                <div><a href="">Blankets</a></div>
-                <div><a href="">Cutains</a></div>
-                <div><a href="">Pillowcases</a></div>
-                <div><a href="">Rugs</a></div>
+                <div><a href="">Large furniture</a></div>
+                <div><a href="">Small furniture</a></div>
+                <div><a href="">Dishes</a></div>
+                <div><a href="">Storage</a></div>
+                <div><a href="">Accessories</a></div>
+                <div><a href="">Soft/Fabric</a></div>
             </div>
-            <a id="mainButton5">Outdoor</a>
+            <a id="mainButton5">Kitchen</a>
             <div id="buttonList5" class="hidden">
-                <div><a href="">Duvet cover sets</a></div>
-                <div><a href="">Sheets</a></div>
-                <div><a href="">Bedspreads</a></div>
-                <div><a href="">Blankets</a></div>
-                <div><a href="">Cutains</a></div>
-                <div><a href="">Pillowcases</a></div>
-                <div><a href="">Rugs</a></div>
+                <div><a href="">Large furniture</a></div>
+                <div><a href="">Small furniture</a></div>
+                <div><a href="">Dishes</a></div>
+                <div><a href="">Storage</a></div>
+                <div><a href="">Accessories</a></div>
+                <div><a href="">Soft/Fabric</a></div>
             </div>
         </div>
         <div class="thi">
@@ -87,7 +82,7 @@
             <form>
                 <input id="white" type="checkbox">
                 <input id="black" type="checkbox">
-                <input id="gray" type="checkbox">
+                <input id="grey" type="checkbox">
                 <input id="yellow" type="checkbox">
             </form>
             <form>
@@ -104,7 +99,7 @@
             </form>
         </div>
         <div class="six">
-            <h3>Gender</h3>
+            <h3>Price</h3>
             <form>
                 <input id="1c" type="checkbox">
                 <label for="1c">0$ – 40$</label>
@@ -148,7 +143,7 @@
                             <div class="image-container">
                                 <img src="img/dec1.svg" alt="">
                                 <div class="popup">
-                                    <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                                     <img src="img/l.svg" alt="" height="25px">
                                     <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                                 </div>
@@ -173,7 +168,7 @@
                             <div class="image-container">
                                 <img src="img/dec1.svg" alt="">
                                 <div class="popup">
-                                    <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                                     <img src="img/l.svg" alt="" height="25px">
                                     <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                                 </div>
@@ -198,7 +193,7 @@
                             <div class="image-container">
                                 <img src="img/dec1.svg" alt="">
                                 <div class="popup">
-                                    <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                                     <img src="img/l.svg" alt="" height="25px">
                                     <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                                 </div>
@@ -223,7 +218,7 @@
                             <div class="image-container">
                                 <img src="img/dec1.svg" alt="">
                                 <div class="popup">
-                                    <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                                     <img src="img/l.svg" alt="" height="25px">
                                     <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                                 </div>
@@ -248,7 +243,7 @@
                             <div class="image-container">
                                 <img src="img/dec1.svg" alt="">
                                 <div class="popup">
-                                    <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                                     <img src="img/l.svg" alt="" height="25px">
                                     <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                                 </div>
@@ -273,7 +268,7 @@
                             <div class="image-container">
                                 <img src="img/dec1.svg" alt="">
                                 <div class="popup">
-                                    <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                                     <img src="img/l.svg" alt="" height="25px">
                                     <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                                 </div>
@@ -298,7 +293,7 @@
                             <div class="image-container">
                                 <img src="img/dec1.svg" alt="">
                                 <div class="popup">
-                                    <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                                     <img src="img/l.svg" alt="" height="25px">
                                     <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                                 </div>
@@ -323,7 +318,7 @@
                             <div class="image-container">
                                 <img src="img/dec1.svg" alt="">
                                 <div class="popup">
-                                    <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                                     <img src="img/l.svg" alt="" height="25px">
                                     <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                                 </div>
@@ -348,7 +343,7 @@
                             <div class="image-container">
                                 <img src="img/dec1.svg" alt="">
                                 <div class="popup">
-                                    <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                                     <img src="img/l.svg" alt="" height="25px">
                                     <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                                 </div>
@@ -373,7 +368,7 @@
                             <div class="image-container">
                                 <img src="img/dec1.svg" alt="">
                                 <div class="popup">
-                                    <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                                     <img src="img/l.svg" alt="" height="25px">
                                     <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                                 </div>
@@ -398,7 +393,7 @@
                             <div class="image-container">
                                 <img src="img/dec1.svg" alt="">
                                 <div class="popup">
-                                    <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                                     <img src="img/l.svg" alt="" height="25px">
                                     <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                                 </div>
@@ -423,7 +418,7 @@
                             <div class="image-container">
                                 <img src="img/dec1.svg" alt="">
                                 <div class="popup">
-                                    <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                                     <img src="img/l.svg" alt="" height="25px">
                                     <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                                 </div>
@@ -448,7 +443,7 @@
                             <div class="image-container">
                                 <img src="img/dec1.svg" alt="">
                                 <div class="popup">
-                                    <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                                     <img src="img/l.svg" alt="" height="25px">
                                     <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                                 </div>
@@ -473,7 +468,7 @@
                             <div class="image-container">
                                 <img src="img/dec1.svg" alt="">
                                 <div class="popup">
-                                    <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                                     <img src="img/l.svg" alt="" height="25px">
                                     <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                                 </div>
@@ -498,7 +493,7 @@
                             <div class="image-container">
                                 <img src="img/dec1.svg" alt="">
                                 <div class="popup">
-                                    <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                                     <img src="img/l.svg" alt="" height="25px">
                                     <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                                 </div>
@@ -523,7 +518,7 @@
                             <div class="image-container">
                                 <img src="img/dec1.svg" alt="">
                                 <div class="popup">
-                                    <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                                     <img src="img/l.svg" alt="" height="25px">
                                     <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                                 </div>
@@ -548,7 +543,7 @@
                             <div class="image-container">
                                 <img src="img/dec1.svg" alt="">
                                 <div class="popup">
-                                    <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                                     <img src="img/l.svg" alt="" height="25px">
                                     <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                                 </div>
@@ -573,7 +568,7 @@
                             <div class="image-container">
                                 <img src="img/dec1.svg" alt="">
                                 <div class="popup">
-                                    <a href="item.html"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                                     <img src="img/l.svg" alt="" height="25px">
                                     <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                                 </div>

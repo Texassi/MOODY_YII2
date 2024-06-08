@@ -8,7 +8,7 @@
         <div class="inf_second">
             <h2>Checked Duvet Cover Set</h2>
             <h2>30$</h2>
-            <p>Light khaki gray/white checks</p>
+            <p>Grey/White checks</p>
             <img class="chi" src="img/dec1.svg" alt="">
             <div class="del">
                 <div class="deliv">
@@ -22,8 +22,9 @@
             </div>
             <div class="con">
                 <p>Conscious</p>
-                <h3>Twin duvet cover set in soft, woven fabric made from a Tencel™lyocell and cotton blend with a printed pattern. One pillowcase. Thread count 144.</h3>
+                <h3>Twin duvet cover set in soft, woven fabric made from a Tencel™lyocell and cotton blend with a printed pattern.</h3>
                 <p class="com">Composition — Cotton 50%, Lyocell 50%</p>
+                <p class="com">Size — 21*45</p>
             </div>
             <button>ADD TO SHOPPING BAG</button>
         </div>
