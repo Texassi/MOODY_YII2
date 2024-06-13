@@ -1,4 +1,7 @@
-<?php use yii\helpers\Url; ?>
+<?php use yii\helpers\Html;
+use yii\helpers\Url;
+use app\models\ProductSearch;
+?>
 <div class="fon_cr">
     <h2 class="h2_1">Member Exclusive</h2>
     <h2 class="h2_2">15% off everything + extra $10 off for plus status</h2>
@@ -9,8 +12,8 @@
 <main class="shop container">
     <div class="nav nav_items">
         <div class="fir">
-            <h3>New arrivals</h3>
-            <a href="">New Arrivals</a>
+            <h3>All products</h3>
+            <?= Html::a('All products', ['store', 'ProductSearch[concept]' => '']) ?>
         </div>
         <div class="sec">
             <h3>Shop by room</h3>
@@ -62,68 +65,67 @@
         </div>
         <div class="thi">
             <h3>Shop by concept</h3>
-            <a href="">Conscious</a>
-            <a href="">Premium quality</a>
-            <a href="">Classic collection</a>
+            <?= Html::a('Conscious', ['store', 'ProductSearch[concept]' => 'Conscious']) ?>
+            <?= Html::a('Premium quality', ['store', 'ProductSearch[concept]' => 'Premium quality']) ?>
+            <?= Html::a('Classic collection', ['store', 'ProductSearch[concept]' => 'Classic collection']) ?>
         </div>
         <div class="fou">
             <h3>Gender</h3>
-            <form>
-                <input id="man" type="checkbox">
-                <label for="man">Man</label>
-            </form>
-            <form>
-                <input id="woman" type="checkbox">
-                <label for="woman">Woman</label>
-            </form>
+            <div>
+                <input id="man" type="checkbox" class="gender-filter" <?= Yii::$app->request->get('ProductSearch')['gender'] == 'Man' ? 'checked' : '' ?>>
+                <label for="man" onclick="document.getElementById('man').checked = !document.getElementById('man').checked;"><?= Html::a('Man', ['store', 'ProductSearch[gender]' => 'Man']) ?></label>
+            </div>
+            <div>
+                <input id="woman" type="checkbox" class="gender-filter" <?= Yii::$app->request->get('ProductSearch')['gender'] == 'Woman' ? 'checked' : '' ?>>
+                <label for="woman" onclick="document.getElementById('woman').checked = !document.getElementById('woman').checked;"><?= Html::a('Woman', ['store', 'ProductSearch[gender]' => 'Woman']) ?></label>
+            </div>
         </div>
         <div class="fiv">
             <h3>Color</h3>
             <form>
-                <input id="white" type="checkbox">
-                <input id="black" type="checkbox">
-                <input id="grey" type="checkbox">
-                <input id="yellow" type="checkbox">
+                <?php
+                $selectedColors = isset(Yii::$app->request->get('ProductSearch')['color']) ? explode(',', Yii::$app->request->get('ProductSearch')['color']) : [];
+                ?>
+                <input id="white" type="checkbox" class="gender-filter" <?= in_array('white', $selectedColors) ? 'checked' : '' ?> onclick="filterByColor()">
+                <input id="black" type="checkbox" class="gender-filter" <?= in_array('black', $selectedColors) ? 'checked' : '' ?> onclick="filterByColor()">
+                <input id="grey" type="checkbox" class="gender-filter" <?= in_array('grey', $selectedColors) ? 'checked' : '' ?> onclick="filterByColor()">
+                <input id="yellow" type="checkbox" class="gender-filter" <?= in_array('yellow', $selectedColors) ? 'checked' : '' ?> onclick="filterByColor()">
             </form>
             <form>
-                <input id="orange" type="checkbox">
-                <input id="red" type="checkbox">
-                <input id="salptovy" type="checkbox">
-                <input id="green" type="checkbox">
+                <input id="orange" type="checkbox" class="gender-filter" <?= in_array('orange', $selectedColors) ? 'checked' : '' ?> onclick="filterByColor()">
+                <input id="red" type="checkbox" class="gender-filter" <?= in_array('red', $selectedColors) ? 'checked' : '' ?> onclick="filterByColor()">
+                <input id="salptovy" type="checkbox" class="gender-filter" <?= in_array('salptovy', $selectedColors) ? 'checked' : '' ?> onclick="filterByColor()">
+                <input id="green" type="checkbox" class="gender-filter" <?= in_array('green', $selectedColors) ? 'checked' : '' ?> onclick="filterByColor()">
             </form>
             <form>
-                <input id="pink" type="checkbox">
-                <input id="purple" type="checkbox">
-                <input id="blue" type="checkbox">
-                <input id="darkblue" type="checkbox">
+                <input id="pink" type="checkbox" class="gender-filter" <?= in_array('pink', $selectedColors) ? 'checked' : '' ?> onclick="filterByColor()">
+                <input id="purple" type="checkbox" class="gender-filter" <?= in_array('purple', $selectedColors) ? 'checked' : '' ?> onclick="filterByColor()">
+                <input id="blue" type="checkbox" class="gender-filter" <?= in_array('blue', $selectedColors) ? 'checked' : '' ?> onclick="filterByColor()">
+                <input id="darkblue" type="checkbox" class="gender-filter" <?= in_array('darkblue', $selectedColors) ? 'checked' : '' ?> onclick="filterByColor()">
             </form>
         </div>
         <div class="six">
             <h3>Price</h3>
-            <form>
-                <input id="1c" type="checkbox">
-                <label for="1c">0$ – 40$</label>
-            </form>
-            <form>
-                <input id="2c" type="checkbox">
-                <label for="2c">40$ – 100$</label>
-            </form>
-            <form>
-                <input id="3c" type="checkbox">
-                <label for="3c">100$ – 150$</label>
-            </form>
-            <form>
-                <input id="4c" type="checkbox">
-                <label for="4c">150$ – 175$</label>
-            </form>
-            <form>
-                <input id="5c" type="checkbox">
-                <label for="5c">175$ – 250$</label>
-            </form>
-            <form>
-                <input id="6c" type="checkbox">
-                <label for="6c">250$ – 350$</label>
-            </form>
+            <div>
+                <input id="1c" type="checkbox" class="gender-filter" <?= Yii::$app->request->get('ProductSearch')['price'] == '0-40' ? 'checked' : '' ?>>
+                <label for="1c" onclick="document.getElementById('0-40').checked = !document.getElementById('0-40').checked;"><?= Html::a('0$ – 40$', ['store', 'ProductSearch[price]' => '0-40']) ?></label>
+            </div>
+            <div>
+                <input id="2c" type="checkbox" class="gender-filter" <?= Yii::$app->request->get('ProductSearch')['price'] == '40-100' ? 'checked' : '' ?>>
+                <label for="2c" onclick="document.getElementById('40-100').checked = !document.getElementById('40-100').checked;"><?= Html::a('40$ – 100$', ['store', 'ProductSearch[price]' => '40-100']) ?></label>
+            </div>
+            <div>
+                <input id="3c" type="checkbox" class="gender-filter" <?= Yii::$app->request->get('ProductSearch')['price'] == '150-175' ? 'checked' : '' ?>>
+                <label for="3c" onclick="document.getElementById('150-175').checked = !document.getElementById('150-175').checked;"><?= Html::a('150$ – 175$', ['store', 'ProductSearch[price]' => '150-175']) ?></label>
+            </div>
+            <div>
+                <input id="4c" type="checkbox" class="gender-filter" <?= Yii::$app->request->get('ProductSearch')['price'] == '175-250' ? 'checked' : '' ?>>
+                <label for="4c" onclick="document.getElementById('175-250').checked = !document.getElementById('175-250').checked;"><?= Html::a('175$ – 250$', ['store', 'ProductSearch[price]' => '175-250']) ?></label>
+            </div>
+            <div>
+                <input id="5c" type="checkbox" class="gender-filter" <?= Yii::$app->request->get('ProductSearch')['price'] == '250-350' ? 'checked' : '' ?>>
+                <label for="5c" onclick="document.getElementById('250-350').checked = !document.getElementById('250-350').checked;"><?= Html::a('250$ – 350$', ['store', 'ProductSearch[price]' => '250-350']) ?></label>
+            </div>
         </div>
     </div>
     <div class="cart-shop">
@@ -133,467 +135,34 @@
                 <button type="submit"></button>
             </form>
         </div>
-        <h1>BEDROOM</h1>
-        <p>It`s easy to transform your bedroom interior with our great selection of accessories.</p>
-        <div id="products">
-            <div class="dec container2">
-                <div class="dec_con2">
-                    <div class="dec_cart2">
-                        <div class="container_img">
-                            <div class="image-container">
-                                <img src="img/dec1.svg" alt="">
-                                <div class="popup">
-                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                                    <img src="img/l.svg" alt="" height="25px">
-                                    <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <p>Linen Beach Towel</p>
-                            <div class="rating2">
-                                <span class="star" data-value="1">✩</span>
-                                <span class="star" data-value="2">✩</span>
-                                <span class="star" data-value="3">✩</span>
-                                <span class="star" data-value="4">✩</span>
-                                <span class="star" data-value="5">✩</span>
-                            </div>
-                            <h2>30$</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="dec_con2">
-                    <div class="dec_cart2">
-                        <div class="container_img">
-                            <div class="image-container">
-                                <img src="img/dec1.svg" alt="">
-                                <div class="popup">
-                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                                    <img src="img/l.svg" alt="" height="25px">
-                                    <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <p>Linen Beach Towel</p>
-                            <div class="rating2">
-                                <span class="star" data-value="1">✩</span>
-                                <span class="star" data-value="2">✩</span>
-                                <span class="star" data-value="3">✩</span>
-                                <span class="star" data-value="4">✩</span>
-                                <span class="star" data-value="5">✩</span>
-                            </div>
-                            <h2>30$</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="dec_con2">
-                    <div class="dec_cart2">
-                        <div class="container_img">
-                            <div class="image-container">
-                                <img src="img/dec1.svg" alt="">
-                                <div class="popup">
-                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                                    <img src="img/l.svg" alt="" height="25px">
-                                    <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <p>Linen Beach Towel</p>
-                            <div class="rating2">
-                                <span class="star" data-value="1">✩</span>
-                                <span class="star" data-value="2">✩</span>
-                                <span class="star" data-value="3">✩</span>
-                                <span class="star" data-value="4">✩</span>
-                                <span class="star" data-value="5">✩</span>
-                            </div>
-                            <h2>30$</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="dec_con2">
-                    <div class="dec_cart2">
-                        <div class="container_img">
-                            <div class="image-container">
-                                <img src="img/dec1.svg" alt="">
-                                <div class="popup">
-                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                                    <img src="img/l.svg" alt="" height="25px">
-                                    <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <p>Linen Beach Towel</p>
-                            <div class="rating2">
-                                <span class="star" data-value="1">✩</span>
-                                <span class="star" data-value="2">✩</span>
-                                <span class="star" data-value="3">✩</span>
-                                <span class="star" data-value="4">✩</span>
-                                <span class="star" data-value="5">✩</span>
-                            </div>
-                            <h2>30$</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="dec_con2">
-                    <div class="dec_cart2">
-                        <div class="container_img">
-                            <div class="image-container">
-                                <img src="img/dec1.svg" alt="">
-                                <div class="popup">
-                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                                    <img src="img/l.svg" alt="" height="25px">
-                                    <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <p>Linen Beach Towel</p>
-                            <div class="rating2">
-                                <span class="star" data-value="1">✩</span>
-                                <span class="star" data-value="2">✩</span>
-                                <span class="star" data-value="3">✩</span>
-                                <span class="star" data-value="4">✩</span>
-                                <span class="star" data-value="5">✩</span>
-                            </div>
-                            <h2>30$</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="dec_con2">
-                    <div class="dec_cart2">
-                        <div class="container_img">
-                            <div class="image-container">
-                                <img src="img/dec1.svg" alt="">
-                                <div class="popup">
-                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                                    <img src="img/l.svg" alt="" height="25px">
-                                    <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <p>Linen Beach Towel</p>
-                            <div class="rating2">
-                                <span class="star" data-value="1">✩</span>
-                                <span class="star" data-value="2">✩</span>
-                                <span class="star" data-value="3">✩</span>
-                                <span class="star" data-value="4">✩</span>
-                                <span class="star" data-value="5">✩</span>
-                            </div>
-                            <h2>30$</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="dec_con2">
-                    <div class="dec_cart2">
-                        <div class="container_img">
-                            <div class="image-container">
-                                <img src="img/dec1.svg" alt="">
-                                <div class="popup">
-                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                                    <img src="img/l.svg" alt="" height="25px">
-                                    <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <p>Linen Beach Towel</p>
-                            <div class="rating2">
-                                <span class="star" data-value="1">✩</span>
-                                <span class="star" data-value="2">✩</span>
-                                <span class="star" data-value="3">✩</span>
-                                <span class="star" data-value="4">✩</span>
-                                <span class="star" data-value="5">✩</span>
-                            </div>
-                            <h2>30$</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="dec_con2">
-                    <div class="dec_cart2">
-                        <div class="container_img">
-                            <div class="image-container">
-                                <img src="img/dec1.svg" alt="">
-                                <div class="popup">
-                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                                    <img src="img/l.svg" alt="" height="25px">
-                                    <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <p>Linen Beach Towel</p>
-                            <div class="rating2">
-                                <span class="star" data-value="1">✩</span>
-                                <span class="star" data-value="2">✩</span>
-                                <span class="star" data-value="3">✩</span>
-                                <span class="star" data-value="4">✩</span>
-                                <span class="star" data-value="5">✩</span>
-                            </div>
-                            <h2>30$</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="dec_con2">
-                    <div class="dec_cart2">
-                        <div class="container_img">
-                            <div class="image-container">
-                                <img src="img/dec1.svg" alt="">
-                                <div class="popup">
-                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                                    <img src="img/l.svg" alt="" height="25px">
-                                    <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <p>Linen Beach Towel</p>
-                            <div class="rating2">
-                                <span class="star" data-value="1">✩</span>
-                                <span class="star" data-value="2">✩</span>
-                                <span class="star" data-value="3">✩</span>
-                                <span class="star" data-value="4">✩</span>
-                                <span class="star" data-value="5">✩</span>
-                            </div>
-                            <h2>30$</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="dec_con2">
-                    <div class="dec_cart2">
-                        <div class="container_img">
-                            <div class="image-container">
-                                <img src="img/dec1.svg" alt="">
-                                <div class="popup">
-                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                                    <img src="img/l.svg" alt="" height="25px">
-                                    <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <p>Linen Beach Towel</p>
-                            <div class="rating2">
-                                <span class="star" data-value="1">✩</span>
-                                <span class="star" data-value="2">✩</span>
-                                <span class="star" data-value="3">✩</span>
-                                <span class="star" data-value="4">✩</span>
-                                <span class="star" data-value="5">✩</span>
-                            </div>
-                            <h2>30$</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="dec_con2">
-                    <div class="dec_cart2">
-                        <div class="container_img">
-                            <div class="image-container">
-                                <img src="img/dec1.svg" alt="">
-                                <div class="popup">
-                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                                    <img src="img/l.svg" alt="" height="25px">
-                                    <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <p>Linen Beach Towel</p>
-                            <div class="rating2">
-                                <span class="star" data-value="1">✩</span>
-                                <span class="star" data-value="2">✩</span>
-                                <span class="star" data-value="3">✩</span>
-                                <span class="star" data-value="4">✩</span>
-                                <span class="star" data-value="5">✩</span>
-                            </div>
-                            <h2>30$</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="dec_con2">
-                    <div class="dec_cart2">
-                        <div class="container_img">
-                            <div class="image-container">
-                                <img src="img/dec1.svg" alt="">
-                                <div class="popup">
-                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                                    <img src="img/l.svg" alt="" height="25px">
-                                    <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <p>Linen Beach Towel</p>
-                            <div class="rating2">
-                                <span class="star" data-value="1">✩</span>
-                                <span class="star" data-value="2">✩</span>
-                                <span class="star" data-value="3">✩</span>
-                                <span class="star" data-value="4">✩</span>
-                                <span class="star" data-value="5">✩</span>
-                            </div>
-                            <h2>30$</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="dec_con2">
-                    <div class="dec_cart2">
-                        <div class="container_img">
-                            <div class="image-container">
-                                <img src="img/dec1.svg" alt="">
-                                <div class="popup">
-                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                                    <img src="img/l.svg" alt="" height="25px">
-                                    <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <p>Linen Beach Towel</p>
-                            <div class="rating2">
-                                <span class="star" data-value="1">✩</span>
-                                <span class="star" data-value="2">✩</span>
-                                <span class="star" data-value="3">✩</span>
-                                <span class="star" data-value="4">✩</span>
-                                <span class="star" data-value="5">✩</span>
-                            </div>
-                            <h2>30$</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="dec_con2">
-                    <div class="dec_cart2">
-                        <div class="container_img">
-                            <div class="image-container">
-                                <img src="img/dec1.svg" alt="">
-                                <div class="popup">
-                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                                    <img src="img/l.svg" alt="" height="25px">
-                                    <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <p>Linen Beach Towel</p>
-                            <div class="rating2">
-                                <span class="star" data-value="1">✩</span>
-                                <span class="star" data-value="2">✩</span>
-                                <span class="star" data-value="3">✩</span>
-                                <span class="star" data-value="4">✩</span>
-                                <span class="star" data-value="5">✩</span>
-                            </div>
-                            <h2>30$</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="dec_con2">
-                    <div class="dec_cart2">
-                        <div class="container_img">
-                            <div class="image-container">
-                                <img src="img/dec1.svg" alt="">
-                                <div class="popup">
-                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                                    <img src="img/l.svg" alt="" height="25px">
-                                    <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <p>Linen Beach Towel</p>
-                            <div class="rating2">
-                                <span class="star" data-value="1">✩</span>
-                                <span class="star" data-value="2">✩</span>
-                                <span class="star" data-value="3">✩</span>
-                                <span class="star" data-value="4">✩</span>
-                                <span class="star" data-value="5">✩</span>
-                            </div>
-                            <h2>30$</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="dec_con2">
-                    <div class="dec_cart2">
-                        <div class="container_img">
-                            <div class="image-container">
-                                <img src="img/dec1.svg" alt="">
-                                <div class="popup">
-                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                                    <img src="img/l.svg" alt="" height="25px">
-                                    <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <p>Linen Beach Towel</p>
-                            <div class="rating2">
-                                <span class="star" data-value="1">✩</span>
-                                <span class="star" data-value="2">✩</span>
-                                <span class="star" data-value="3">✩</span>
-                                <span class="star" data-value="4">✩</span>
-                                <span class="star" data-value="5">✩</span>
-                            </div>
-                            <h2>30$</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="dec_con2">
-                    <div class="dec_cart2">
-                        <div class="container_img">
-                            <div class="image-container">
-                                <img src="img/dec1.svg" alt="">
-                                <div class="popup">
-                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                                    <img src="img/l.svg" alt="" height="25px">
-                                    <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <p>Linen Beach Towel</p>
-                            <div class="rating2">
-                                <span class="star" data-value="1">✩</span>
-                                <span class="star" data-value="2">✩</span>
-                                <span class="star" data-value="3">✩</span>
-                                <span class="star" data-value="4">✩</span>
-                                <span class="star" data-value="5">✩</span>
-                            </div>
-                            <h2>30$</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="dec_con2">
-                    <div class="dec_cart2">
-                        <div class="container_img">
-                            <div class="image-container">
-                                <img src="img/dec1.svg" alt="">
-                                <div class="popup">
-                                    <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                                    <img src="img/l.svg" alt="" height="25px">
-                                    <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <p>Linen Beach Towel</p>
-                            <div class="rating2">
-                                <span class="star" data-value="1">✩</span>
-                                <span class="star" data-value="2">✩</span>
-                                <span class="star" data-value="3">✩</span>
-                                <span class="star" data-value="4">✩</span>
-                                <span class="star" data-value="5">✩</span>
-                            </div>
-                            <h2>30$</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="but">
-            <button id="loadMore">Load more products</button>
-            <button id="showLess">Show less</button>
+        <h1>All products</h1>
+        <p>It's easy to transform your home's interior with our large selection of accessories.</p>
+        <div class="dec container2" id="product-list">
+            <?php
+            use yii\widgets\ListView;
+
+            echo ListView::widget([
+                'dataProvider' => $dataProvider,
+                'itemView' => '_product',
+                'layout' => "{items}\n{pager}",
+            ]);
+            ?>
         </div>
         <a class="up" href="#top"><img height="50px" width="50px" src="img/up.svg" alt=""></a>
     </div>
 </main>
 
+<script>
+    function filterByColor() {
+        var checkedColors = [];
+        var checkboxes = document.querySelectorAll('.gender-filter');
+        for (var i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked) {
+                checkedColors.push(checkboxes[i].id);
+            }
+        }
+        var url = new URL(window.location.href);
+        url.searchParams.set('ProductSearch[color]', checkedColors.join(','));
+        window.location.href = url.toString();
+    }
+</script>

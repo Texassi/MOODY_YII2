@@ -1,15 +1,15 @@
-<?php ?>
+<?php use yii\helpers\Html; ?>
 <main class="container">
     <div class="inf">
         <div class="inf_first">
-            <img src="img/dec1.svg" alt="">
-            <img src="img/dec1_2.png" alt="">
+            <img src="<?= /** @var TYPE_NAME $product */
+            $product->image ?>" alt="">
         </div>
         <div class="inf_second">
-            <h2>Checked Duvet Cover Set</h2>
-            <h2>30$</h2>
-            <p>Grey/White checks</p>
-            <img class="chi" src="img/dec1.svg" alt="">
+            <h2><?= $product->name ?></h2>
+            <h2><?= $product->price ?>$</h2>
+            <p><?= $product->color ?> checks</p>
+            <img class="chi" src="<?= $product->image ?>" alt="">
             <div class="del">
                 <div class="deliv">
                     <img class="dost" src="img/dost.svg" alt="">
@@ -22,11 +22,11 @@
             </div>
             <div class="con">
                 <p>Conscious</p>
-                <h3>Twin duvet cover set in soft, woven fabric made from a Tencel™lyocell and cotton blend with a printed pattern.</h3>
-                <p class="com">Composition — Cotton 50%, Lyocell 50%</p>
-                <p class="com">Size — 21*45</p>
+                <h3><?= $product->description ?></h3>
+                <p class="com">Composition — <?= $product->сomposition ?></p>
+                <p class="com">Size — <?= $product->size ?></p>
             </div>
-            <button>ADD TO SHOPPING BAG</button>
+            <button class="add-to-cart" data-id="1">ADD TO SHOPPING BAG</button>
         </div>
     </div>
 </main>

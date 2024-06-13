@@ -2,6 +2,8 @@
 
 namespace app\controllers;
 
+use app\models\Product;
+use app\models\ProductSearch;
 use app\models\SignupForm;
 use Yii;
 use yii\filters\AccessControl;
@@ -63,7 +65,12 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $products6 = Product::find()->limit(6)->all();
+        $products12 = Product::find()->limit(12)->orderBy('RAND()')->all();
+        return $this->render('index', [
+            'products6' => $products6,
+            'products12' => $products12,
+        ]);
     }
 
     public function actionCart(){
@@ -74,18 +81,40 @@ class SiteController extends Controller
         return $this->render('like');
     }
 
-    public function actionStore(){
-        return $this->render('store');
-    }
-
-    public function actionItem()
+    public function actionItem($id)
     {
-        return $this->render('item');
+        $product = Product::findOne($id);
+
+        if ($product === null) {
+            throw new \yii\web\NotFoundHttpException('The requested product does not exist.');
+        }
+
+        return $this->render('item', [
+            'product' => $product,
+        ]);
     }
 
     public function actionInfo()
     {
         return $this->render('info');
+    }
+
+    public function actionStore()
+    {
+        $searchModel = new ProductSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider->pagination->pageSize = 18; // устанавливаем размер страницы
+
+        return $this->render('store', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    public function action_Product(){
+        $productsall = Product::find()->all();
+        return $this->render('_product', ['productsall' => $productsall]);
+
     }
 
     /**

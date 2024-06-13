@@ -1,6 +1,6 @@
 $(document).ready(function() {
     var itemsToShow = 6;
-    var itemsIncrement = 3;
+    var itemsIncrement = 6;
     
     $('.product:lt(' + itemsToShow + ')').show();
     $('#showLess').hide();

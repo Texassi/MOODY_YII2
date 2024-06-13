@@ -8,6 +8,19 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+* .list-view .pagination{
+  display: flex;
+  justify-content: space-around;
+  /*width: 1100px;*/
+  margin-bottom: 30px;
+}
+* .list-view{
+  display: grid;
+  width: 1100px;
+  grid-template-columns: 395px 395px 394px;
+  justify-content: space-between;
+}
 * .site-signup h1{
   font-family: Roboto;
   font-style: normal;
@@ -325,7 +338,7 @@
   padding-bottom: 5px;
   margin-top: 10px;
 }
-* body .kor .kor-s button {
+* body .kor .kor-s .button {
   font-family: Roboto;
   font-style: normal;
   font-weight: 800;
@@ -944,7 +957,7 @@
   font-style: normal;
   font-weight: 800;
   line-height: normal;
-  font-size: 18px;
+  font-size: 20px;
   color: #323334;
   padding: 25px 0 10px 0;
   margin-bottom: 0;
@@ -1092,7 +1105,7 @@
   line-height: normal;
   font-size: 28px;
   padding: 0;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 * body .catalog .but {
   display: flex;
@@ -1122,6 +1135,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 0;
 }
 * body .catalog .catal {
   display: flex;
@@ -1140,17 +1154,14 @@
 }
 * body .catalog .catal .catal_text {
   margin-left: 30px;
-  margin-top: 90px;
-}
-* body .catalog .catal img {
-  margin-bottom: 13px;
+  margin-top: 65px;
 }
 * body .catalog .catal p {
   font-family: Roboto;
   font-style: normal;
   font-weight: 800;
   line-height: normal;
-  font-size: 18px;
+  font-size: 20px;
   color: #323334;
   padding: 25px 0 12px 0;
   width: 150px;
@@ -1163,7 +1174,7 @@
   display: flex;
   width: 100px;
   gap: 20px;
-  margin-top: -20px;
+  margin-top: 10px;
 }
 * body .forma {
   display: flex;
@@ -1307,7 +1318,7 @@
 }
 * body .product {
   display: none;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 @media screen and (max-width: 768px) {
   * body .container {

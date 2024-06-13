@@ -5,6 +5,7 @@
 use yii\helpers\Url;
 
 $this->title = 'MOODY.S';
+
 ?>
 <div class="site-index">
     <header class="container">
@@ -157,158 +158,35 @@ $this->title = 'MOODY.S';
                 </div>
             </div>
         </div>
-        <div class="dec_con2">
-            <div class="dec_cart2">
-                <div class="container_img">
-                    <div class="image-container">
-                        <img src="img/dec1.svg" alt="">
-                        <div class="popup">
-                            <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                            <img src="img/l.svg" alt="" height="25px">
-                            <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
+        <?php
+        /** @var TYPE_NAME $products6 */
+        foreach ($products6 as $product): ?>
+            <div class="dec_con2">
+                <div class="dec_cart2">
+                    <div class="container_img">
+                        <div class="image-container">
+                            <img width="306px" height="422px" src="<?= $product->image ?>" alt="">
+                            <div class="popup">
+                                <a href="<?= Url::to(['/site/item', 'id' => $product->id]) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                                <img src="img/l.svg" alt="" height="25px">
+                                <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div>
-                    <p>Linen Beach Towel</p>
-                    <div class="rating">
-                        <span class="star" data-value="1">✩</span>
-                        <span class="star" data-value="2">✩</span>
-                        <span class="star" data-value="3">✩</span>
-                        <span class="star" data-value="4">✩</span>
-                        <span class="star" data-value="5">✩</span>
-                    </div>
-                    <h2>30$</h2>
-                </div>
-            </div>
-        </div>
-        <div class="dec_con2">
-            <div class="dec_cart2">
-                <div class="container_img">
-                    <div class="image-container">
-                        <img src="img/dec2.svg" alt="">
-                        <div class="popup">
-                            <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                            <img src="img/l.svg" alt="" height="25px">
-                            <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
+                    <div>
+                        <p><?= $product->name ?></p>
+                        <div class="rating2">
+                            <span class="star" data-value="1">✩</span>
+                            <span class="star" data-value="2">✩</span>
+                            <span class="star" data-value="3">✩</span>
+                            <span class="star" data-value="4">✩</span>
+                            <span class="star" data-value="5">✩</span>
                         </div>
+                        <h2><?= $product->price ?>$</h2>
                     </div>
-                </div>
-                <div>
-                    <p>Square Clear Glass Box</p>
-                    <div class="rating">
-                        <span class="star" data-value="1">✩</span>
-                        <span class="star" data-value="2">✩</span>
-                        <span class="star" data-value="3">✩</span>
-                        <span class="star" data-value="4">✩</span>
-                        <span class="star" data-value="5">✩</span>
-                    </div>
-                    <h2>30$</h2>
                 </div>
             </div>
-        </div>
-        <div class="dec_con2">
-            <div class="dec_cart2">
-                <div class="container_img">
-                    <div class="image-container">
-                        <img src="img/dec3.svg" alt="">
-                        <div class="popup">
-                            <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                            <img src="img/l.svg" alt="" height="25px">
-                            <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <p>4-pack Small Ceramic Plates</p>
-                    <div class="rating">
-                        <span class="star" data-value="1">✩</span>
-                        <span class="star" data-value="2">✩</span>
-                        <span class="star" data-value="3">✩</span>
-                        <span class="star" data-value="4">✩</span>
-                        <span class="star" data-value="5">✩</span>
-                    </div>
-                    <h2>30$</h2>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="dec container">
-        <div class="dec_con2">
-            <div class="dec_cart2">
-                <div class="container_img">
-                    <div class="image-container">
-                        <img src="img/dec4.svg" alt="">
-                        <div class="popup">
-                            <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                            <img src="img/l.svg" alt="" height="25px">
-                            <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <p>Large Clear Glass Box</p>
-                    <div class="rating">
-                        <span class="star" data-value="1">✩</span>
-                        <span class="star" data-value="2">✩</span>
-                        <span class="star" data-value="3">✩</span>
-                        <span class="star" data-value="4">✩</span>
-                        <span class="star" data-value="5">✩</span>
-                    </div>
-                    <h2>30$</h2>
-                </div>
-            </div>
-        </div>
-        <div class="dec_con2">
-            <div class="dec_cart2">
-                <div class="container_img">
-                    <div class="image-container">
-                        <img src="img/dec5.svg" alt="">
-                        <div class="popup">
-                            <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                            <img src="img/l.svg" alt="" height="25px">
-                            <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <p>Round Jute Placemat</p>
-                    <div class="rating">
-                        <span class="star" data-value="1">✩</span>
-                        <span class="star" data-value="2">✩</span>
-                        <span class="star" data-value="3">✩</span>
-                        <span class="star" data-value="4">✩</span>
-                        <span class="star" data-value="5">✩</span>
-                    </div>
-                    <h2>30$</h2>
-                </div>
-            </div>
-        </div>
-        <div class="dec_con2">
-            <div class="dec_cart2">
-                <div class="container_img">
-                    <div class="image-container">
-                        <img src="img/dec6.svg" alt="">
-                        <div class="popup">
-                            <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                            <img src="img/l.svg" alt="" height="25px">
-                            <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <p>Metal Wire Basket</p>
-                    <div class="rating">
-                        <span class="star" data-value="1">✩</span>
-                        <span class="star" data-value="2">✩</span>
-                        <span class="star" data-value="3">✩</span>
-                        <span class="star" data-value="4">✩</span>
-                        <span class="star" data-value="5">✩</span>
-                    </div>
-                    <h2>30$</h2>
-                </div>
-            </div>
-        </div>
+        <?php endforeach; ?>
         <div class="dec_con1">
             <div class="dec_cart1">
                 <div class="imgs">
@@ -347,13 +225,16 @@ $this->title = 'MOODY.S';
         <h2>TOP RATING</h2>
         <div id="products2">
             <div class="sec_catal container">
+                <?php
+                /** @var TYPE_NAME $products12 */
+                foreach ($products12 as $product): ?>
                 <div class="product">
                     <div class="catal">
                         <div>
-                            <img class="img_top" src="img/cat1.svg" alt="">
+                            <img width="230px" height="357px" class="img_top" src="<?= $product->image ?>" alt="">
                         </div>
                         <div class="catal_text">
-                            <p>Tray with Foot</p>
+                            <p><?= $product->name ?></p>
                             <div class="rating">
                                 <span class="star" data-value="1">✩</span>
                                 <span class="star" data-value="2">✩</span>
@@ -361,268 +242,16 @@ $this->title = 'MOODY.S';
                                 <span class="star" data-value="4">✩</span>
                                 <span class="star" data-value="5">✩</span>
                             </div>
-                            <h2>30$</h2>
+                            <h2><?= $product->price ?>$</h2>
                             <div class="popup">
-                                <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
+                                <a href="<?= Url::to(['/site/item', 'id' => $product->id]) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                                 <img src="img/l.svg" alt="" height="25px">
                                 <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="product">
-                    <div class="catal">
-                        <div>
-                            <img class="img_top" src="img/cat1.svg" alt="">
-                        </div>
-                        <div class="catal_text">
-                            <p>Tray with Foot</p>
-                            <div class="rating">
-                                <span class="star" data-value="1">✩</span>
-                                <span class="star" data-value="2">✩</span>
-                                <span class="star" data-value="3">✩</span>
-                                <span class="star" data-value="4">✩</span>
-                                <span class="star" data-value="5">✩</span>
-                            </div>
-                            <h2>30$</h2>
-                            <div class="popup">
-                                <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                                <img src="img/l.svg" alt="" height="25px">
-                                <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="catal">
-                        <div>
-                            <img class="img_top" src="img/cat1.svg" alt="">
-                        </div>
-                        <div class="catal_text">
-                            <p>Tray with Foot</p>
-                            <div class="rating">
-                                <span class="star" data-value="1">✩</span>
-                                <span class="star" data-value="2">✩</span>
-                                <span class="star" data-value="3">✩</span>
-                                <span class="star" data-value="4">✩</span>
-                                <span class="star" data-value="5">✩</span>
-                            </div>
-                            <h2>30$</h2>
-                            <div class="popup">
-                                <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                                <img src="img/l.svg" alt="" height="25px">
-                                <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="catal">
-                        <div>
-                            <img class="img_top" src="img/cat1.svg" alt="">
-                        </div>
-                        <div class="catal_text">
-                            <p>Tray with Foot</p>
-                            <div class="rating">
-                                <span class="star" data-value="1">✩</span>
-                                <span class="star" data-value="2">✩</span>
-                                <span class="star" data-value="3">✩</span>
-                                <span class="star" data-value="4">✩</span>
-                                <span class="star" data-value="5">✩</span>
-                            </div>
-                            <h2>30$</h2>
-                            <div class="popup">
-                                <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                                <img src="img/l.svg" alt="" height="25px">
-                                <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="catal">
-                        <div>
-                            <img class="img_top" src="img/cat1.svg" alt="">
-                        </div>
-                        <div class="catal_text">
-                            <p>Tray with Foot</p>
-                            <div class="rating">
-                                <span class="star" data-value="1">✩</span>
-                                <span class="star" data-value="2">✩</span>
-                                <span class="star" data-value="3">✩</span>
-                                <span class="star" data-value="4">✩</span>
-                                <span class="star" data-value="5">✩</span>
-                            </div>
-                            <h2>30$</h2>
-                            <div class="popup">
-                                <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                                <img src="img/l.svg" alt="" height="25px">
-                                <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="catal">
-                        <div>
-                            <img class="img_top" src="img/cat1.svg" alt="">
-                        </div>
-                        <div class="catal_text">
-                            <p>Tray with Foot</p>
-                            <div class="rating">
-                                <span class="star" data-value="1">✩</span>
-                                <span class="star" data-value="2">✩</span>
-                                <span class="star" data-value="3">✩</span>
-                                <span class="star" data-value="4">✩</span>
-                                <span class="star" data-value="5">✩</span>
-                            </div>
-                            <h2>30$</h2>
-                            <div class="popup">
-                                <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                                <img src="img/l.svg" alt="" height="25px">
-                                <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="catal">
-                        <div>
-                            <img class="img_top" src="img/cat1.svg" alt="">
-                        </div>
-                        <div class="catal_text">
-                            <p>Tray with Foot</p>
-                            <div class="rating">
-                                <span class="star" data-value="1">✩</span>
-                                <span class="star" data-value="2">✩</span>
-                                <span class="star" data-value="3">✩</span>
-                                <span class="star" data-value="4">✩</span>
-                                <span class="star" data-value="5">✩</span>
-                            </div>
-                            <h2>30$</h2>
-                            <div class="popup">
-                                <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                                <img src="img/l.svg" alt="" height="25px">
-                                <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="catal">
-                        <div>
-                            <img class="img_top" src="img/cat1.svg" alt="">
-                        </div>
-                        <div class="catal_text">
-                            <p>Tray with Foot</p>
-                            <div class="rating">
-                                <span class="star" data-value="1">✩</span>
-                                <span class="star" data-value="2">✩</span>
-                                <span class="star" data-value="3">✩</span>
-                                <span class="star" data-value="4">✩</span>
-                                <span class="star" data-value="5">✩</span>
-                            </div>
-                            <h2>30$</h2>
-                            <div class="popup">
-                                <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                                <img src="img/l.svg" alt="" height="25px">
-                                <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="catal">
-                        <div>
-                            <img class="img_top" src="img/cat1.svg" alt="">
-                        </div>
-                        <div class="catal_text">
-                            <p>Tray with Foot</p>
-                            <div class="rating">
-                                <span class="star" data-value="1">✩</span>
-                                <span class="star" data-value="2">✩</span>
-                                <span class="star" data-value="3">✩</span>
-                                <span class="star" data-value="4">✩</span>
-                                <span class="star" data-value="5">✩</span>
-                            </div>
-                            <h2>30$</h2>
-                            <div class="popup">
-                                <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                                <img src="img/l.svg" alt="" height="25px">
-                                <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="catal">
-                        <div>
-                            <img class="img_top" src="img/cat1.svg" alt="">
-                        </div>
-                        <div class="catal_text">
-                            <p>Tray with Foot</p>
-                            <div class="rating">
-                                <span class="star" data-value="1">✩</span>
-                                <span class="star" data-value="2">✩</span>
-                                <span class="star" data-value="3">✩</span>
-                                <span class="star" data-value="4">✩</span>
-                                <span class="star" data-value="5">✩</span>
-                            </div>
-                            <h2>30$</h2>
-                            <div class="popup">
-                                <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                                <img src="img/l.svg" alt="" height="25px">
-                                <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="catal">
-                        <div>
-                            <img class="img_top" src="img/cat1.svg" alt="">
-                        </div>
-                        <div class="catal_text">
-                            <p>Tray with Foot</p>
-                            <div class="rating">
-                                <span class="star" data-value="1">✩</span>
-                                <span class="star" data-value="2">✩</span>
-                                <span class="star" data-value="3">✩</span>
-                                <span class="star" data-value="4">✩</span>
-                                <span class="star" data-value="5">✩</span>
-                            </div>
-                            <h2>30$</h2>
-                            <div class="popup">
-                                <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                                <img src="img/l.svg" alt="" height="25px">
-                                <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="catal">
-                        <div>
-                            <img class="img_top" src="img/cat1.svg" alt="">
-                        </div>
-                        <div class="catal_text">
-                            <p>Tray with Foot</p>
-                            <div class="rating">
-                                <span class="star" data-value="1">✩</span>
-                                <span class="star" data-value="2">✩</span>
-                                <span class="star" data-value="3">✩</span>
-                                <span class="star" data-value="4">✩</span>
-                                <span class="star" data-value="5">✩</span>
-                            </div>
-                            <h2>30$</h2>
-                            <div class="popup">
-                                <a href="<?= Url::to(['/site/item']) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
-                                <img src="img/l.svg" alt="" height="25px">
-                                <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
         <div class="but">

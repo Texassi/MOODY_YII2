@@ -1,0 +1,71 @@
+<?php
+namespace app\models;
+
+use yii\base\Model;
+use yii\data\ActiveDataProvider;
+use app\models\Product;
+
+class ProductSearch extends Product
+{
+    public $concept;
+    public $gender;
+    public $price;
+    public $color;
+
+    public function rules()
+    {
+        return [
+            [['concept', 'gender', 'price', 'color'], 'safe'],
+        ];
+    }
+
+    public function scenarios()
+    {
+        return Model::scenarios();
+    }
+
+    public function search($params)
+    {
+        $query = Product::find();
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+        ]);
+
+        $this->load($params);
+
+        if (!$this->validate()) {
+            return $dataProvider;
+        }
+
+        $query->andFilterWhere(['concept' => $this->concept]);
+        $query->andFilterWhere(['gender' => $this->gender]);
+        if ($this->price) {
+            switch ($this->price) {
+                case '0-40':
+                    $query->andFilterWhere(['between', 'price', 0, 40]);
+                    break;
+                case '40-100':
+                    $query->andFilterWhere(['between', 'price', 40, 100]);
+                    break;
+                case '100-150':
+                    $query->andFilterWhere(['between', 'price', 100, 150]);
+                    break;
+                case '150-175':
+                    $query->andFilterWhere(['between', 'price', 150, 175]);
+                    break;
+                case '175-250':
+                    $query->andFilterWhere(['between', 'price', 175, 250]);
+                    break;
+                case '250-350':
+                    $query->andFilterWhere(['between', 'price', 250, 350]);
+                    break;
+            }
+        }
+        if ($this->color) {
+            $query->andFilterWhere(['color' => $this->color]);
+        }
+
+        return $dataProvider;
+    }
+}

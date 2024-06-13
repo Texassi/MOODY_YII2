@@ -1,88 +1,61 @@
 <?php
 
+use yii\helpers\Html;
+
 ?>
+
 <div class="kor container">
     <h1 class="kor-name">SHOPPING BAG</h1>
     <div class="kor-con">
         <div class="kor-f">
-            <div class="sec-kor">
-                <div class="kors-1">
-                    <div>
-                        <img src="img/dec1.svg" alt="">
-                    </div>
-                    <div>
-                        <h2>Checked Duvet Cover Set</h2>
-                        <h1>39$</h1>
-                        <div class="about_kor">
-                            <div>
-                                <p>Art. No.:  54637253</p>
-                                <p>Color:  Gray</p>
-                            </div>
-                            <div>
-                                <p>Size: 21*45</p>
-                                <p>Total: 39$</p>
-                            </div>
-                        </div>
-                        <div class="btns-kor">
-                            <button><img src="img/like.svg" alt=""></button>
-                            <div>
-                                <div class="quantity-block">
-                                    <button class="quantity-arrow-minus"> - </button>
-                                    <input class="quantity-num" type="number" value="1" max="500">
-                                    <button class="quantity-arrow-plus"> + </button>
+            <?php if (isset($products)) {
+                foreach ($products as $product): ?>
+                        <div class="sec-kor">
+                            <div class="kors-1">
+                                <div>
+                                    <img src="<?= $product->image ?>" alt="">
+                                </div>
+                                <div>
+                                    <h2><?= $product->product->name ?></h2>
+                                    <h1><?= $product->product->price ?>$</h1>
+                                    <div class="about_kor">
+                                        <div>
+                                            <p>Art. No.: <?= $product->product->id ?></p>
+                                            <p>Color: <?= $product->product->color ?></p>
+                                        </div>
+                                        <div>
+                                            <p>Size: <?= $product->product->size ?></p>
+                                            <p>Total: <?= $product->quantity * $product->product->price ?>$</p>
+                                        </div>
+                                    </div>
+                                    <div class="btns-kor">
+                                        <button><img src="img/like.svg" alt=""></button>
+                                        <div>
+                                            <div class="quantity-block">
+                                                <?= Html::a('-', ['remove', 'id' => $product->id], ['class' => 'quantity-arrow-minus']) ?>
+                                                <input class="quantity-num" type="number" value="<?= $product->quantity ?>" max="500">
+                                                <?= Html::a('+', ['add', 'id' => $product->id], ['class' => 'quantity-arrow-plus']) ?>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="kre_kor">
-                    <button><img src="img/krest.svg" alt=""></button>
-                </div>
-            </div>
-            <div class="sec-kor">
-                <div class="kors-1">
-                    <div>
-                        <img src="img/dec1.svg" alt="">
-                    </div>
-                    <div>
-                        <h2>Checked Duvet Cover Set</h2>
-                        <h1>39$</h1>
-                        <div class="about_kor">
-                            <div>
-                                <p>Art. No.:  54637253</p>
-                                <p>Color:  Gray</p>
-                            </div>
-                            <div>
-                                <p>Size: 21*45</p>
-                                <p>Total: 39$</p>
+                            <div class="kre_kor">
+                                <?= Html::a('<img src="img/krest.svg" alt="">', ['remove', 'id' => $product->id], ['class' => 'btn btn-danger']) ?>
                             </div>
                         </div>
-                        <div class="btns-kor">
-                            <button><img src="img/like.svg" alt=""></button>
-                            <div>
-                                <div class="quantity-block">
-                                    <button class="quantity-arrow-minus"> - </button>
-                                    <input class="quantity-num" type="number" value="1" max="500">
-                                    <button class="quantity-arrow-plus"> + </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="kre_kor">
-                    <button><img src="img/krest.svg" alt=""></button>
-                </div>
-            </div>
+                <?php endforeach;
+            } ?>
             <div class="kor-tot">
                 <h2>Total</h2>
                 <div class="line-kor"></div>
-                <h2>60$</h2>
+                <h2><?= $total ?>$</h2>
             </div>
         </div>
         <div class="kor-s">
             <h2>ADD A DISCOUNT CODE</h2>
-            <form action="site/" method="post">
-                <input id="inp" type="text">
+            <form action="<?= Yii::$app->urlManager->createUrl(['cart/add-discount']) ?>" method="post">
+                <input id="inp" type="text" name="discount_code">
                 <input id="but" type="image" name="picture" src="img/ADD.svg"/>
             </form>
             <div class="ord-kor">
@@ -92,12 +65,12 @@
                     <p class="p2">Total:</p>
                 </div>
                 <div>
-                    <p>60$</p>
+                    <p><?= $total ?>$</p>
                     <p>0$</p>
-                    <p class="p2">60$</p>
+                    <p class="p2"><?= $total ?>$</p>
                 </div>
             </div>
-            <button>CONTINUE TO CHECKUOT</button>
+            <?= Html::a('CONTINUE TO CHECKOUT', ['checkout/index'], ['class' => 'button']) ?>
         </div>
     </div>
 </div>
