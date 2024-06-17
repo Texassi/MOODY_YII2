@@ -8,7 +8,7 @@
 use yii\bootstrap5\ActiveForm;
 use yii\bootstrap5\Html;
 
-$this->title = 'Login';
+$this->title = 'MOODY.S'
 ?>
 <div class="site-signup container">
     <h1><?= Html::encode($this->title) ?></h1>

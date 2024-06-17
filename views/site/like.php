@@ -1,5 +1,5 @@
 <?php
-
+$this->title = 'MOODY.S'
 ?>
 <div class="kor container">
     <h1 class="kor-name">YOU LIKED</h1>

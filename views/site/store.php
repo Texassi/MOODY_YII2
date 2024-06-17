@@ -1,6 +1,8 @@
 <?php use yii\helpers\Html;
 use yii\helpers\Url;
 use app\models\ProductSearch;
+
+$this->title = 'MOODY.S';
 ?>
 <div class="fon_cr">
     <h2 class="h2_1">Member Exclusive</h2>
@@ -17,50 +19,50 @@ use app\models\ProductSearch;
         </div>
         <div class="sec">
             <h3>Shop by room</h3>
-            <a id="mainButton1">Bedroom</a>
+            <?= Html::a('Bedroom', ['store', 'ProductSearch[place]' => 'Bedroom'], ['id' => 'mainButton1']) ?>
             <div id="buttonList1" class="hidden">
-                <div><a href="">Large furniture</a></div>
-                <div><a href="">Small furniture</a></div>
-                <div><a href="">Dishes</a></div>
-                <div><a href="">Storage</a></div>
-                <div><a href="">Accessories</a></div>
-                <div><a href="">Soft/Fabric</a></div>
+                <div><?= Html::a('Large furniture', ['store', 'ProductSearch[belonging]' => 'Large furniture', 'ProductSearch[place]' => 'Bedroom']) ?></div>
+                <div><?= Html::a('Small furniture', ['store', 'ProductSearch[belonging]' => 'Small furniture', 'ProductSearch[place]' => 'Bedroom']) ?></div>
+                <div><?= Html::a('Dishes', ['store', 'ProductSearch[belonging]' => 'Dishes', 'ProductSearch[place]' => 'Bedroom']) ?></div>
+                <div><?= Html::a('Storage', ['store', 'ProductSearch[belonging]' => 'Storage', 'ProductSearch[place]' => 'Bedroom']) ?></div>
+                <div><?= Html::a('Accessories', ['store', 'ProductSearch[belonging]' => 'Accessories', 'ProductSearch[place]' => 'Bedroom']) ?></div>
+                <div><?= Html::a('Soft/Fabric', ['store', 'ProductSearch[belonging]' => 'Soft/Fabric', 'ProductSearch[place]' => 'Bedroom']) ?></div>
             </div>
-            <a id="mainButton2">Living room</a>
+            <?= Html::a('Living room', ['store', 'ProductSearch[place]' => 'Living room'], ['id' => 'mainButton2']) ?>
             <div id="buttonList2" class="hidden">
-                <div><a href="">Large furniture</a></div>
-                <div><a href="">Small furniture</a></div>
-                <div><a href="">Dishes</a></div>
-                <div><a href="">Storage</a></div>
-                <div><a href="">Accessories</a></div>
-                <div><a href="">Soft/Fabric</a></div>
+                <div><?= Html::a('Large furniture', ['store', 'ProductSearch[belonging]' => 'Large furniture', 'ProductSearch[place]' => 'Living room']) ?></div>
+                <div><?= Html::a('Small furniture', ['store', 'ProductSearch[belonging]' => 'Small furniture', 'ProductSearch[place]' => 'Living room']) ?></div>
+                <div><?= Html::a('Dishes', ['store', 'ProductSearch[belonging]' => 'Dishes', 'ProductSearch[place]' => 'Living room']) ?></div>
+                <div><?= Html::a('Storage', ['store', 'ProductSearch[belonging]' => 'Storage', 'ProductSearch[place]' => 'Living room']) ?></div>
+                <div><?= Html::a('Accessories', ['store', 'ProductSearch[belonging]' => 'Accessories', 'ProductSearch[place]' => 'Living room']) ?></div>
+                <div><?= Html::a('Soft/Fabric', ['store', 'ProductSearch[belonging]' => 'Soft/Fabric', 'ProductSearch[place]' => 'Living room']) ?></div>
             </div>
-            <a id="mainButton3">Child room</a>
+            <?= Html::a('Child room', ['store', 'ProductSearch[place]' => 'Child room'], ['id' => 'mainButton3']) ?>
             <div id="buttonList3" class="hidden">
-                <div><a href="">Large furniture</a></div>
-                <div><a href="">Small furniture</a></div>
-                <div><a href="">Dishes</a></div>
-                <div><a href="">Storage</a></div>
-                <div><a href="">Accessories</a></div>
-                <div><a href="">Soft/Fabric</a></div>
+                <div><?= Html::a('Large furniture', ['store', 'ProductSearch[belonging]' => 'Large furniture', 'ProductSearch[place]' => 'Child room']) ?></div>
+                <div><?= Html::a('Small furniture', ['store', 'ProductSearch[belonging]' => 'Small furniture', 'ProductSearch[place]' => 'Child room']) ?></div>
+                <div><?= Html::a('Dishes', ['store', 'ProductSearch[belonging]' => 'Dishes', 'ProductSearch[place]' => 'Child room']) ?></div>
+                <div><?= Html::a('Storage', ['store', 'ProductSearch[belonging]' => 'Storage', 'ProductSearch[place]' => 'Child room']) ?></div>
+                <div><?= Html::a('Accessories', ['store', 'ProductSearch[belonging]' => 'Accessories', 'ProductSearch[place]' => 'Child room']) ?></div>
+                <div><?= Html::a('Soft/Fabric', ['store', 'ProductSearch[belonging]' => 'Soft/Fabric', 'ProductSearch[place]' => 'Child room']) ?></div>
             </div>
-            <a id="mainButton4">Bathroom</a>
+            <?= Html::a('Bathroom', ['store', 'ProductSearch[place]' => 'Bathroom'], ['id' => 'mainButton4']) ?>
             <div id="buttonList4" class="hidden">
-                <div><a href="">Large furniture</a></div>
-                <div><a href="">Small furniture</a></div>
-                <div><a href="">Dishes</a></div>
-                <div><a href="">Storage</a></div>
-                <div><a href="">Accessories</a></div>
-                <div><a href="">Soft/Fabric</a></div>
+                <div><?= Html::a('Large furniture', ['store', 'ProductSearch[belonging]' => 'Large furniture', 'ProductSearch[place]' => 'Bathroom']) ?></div>
+                <div><?= Html::a('Small furniture', ['store', 'ProductSearch[belonging]' => 'Small furniture', 'ProductSearch[place]' => 'Bathroom']) ?></div>
+                <div><?= Html::a('Dishes', ['store', 'ProductSearch[belonging]' => 'Dishes', 'ProductSearch[place]' => 'Bathroom']) ?></div>
+                <div><?= Html::a('Storage', ['store', 'ProductSearch[belonging]' => 'Storage', 'ProductSearch[place]' => 'Bathroom']) ?></div>
+                <div><?= Html::a('Accessories', ['store', 'ProductSearch[belonging]' => 'Accessories', 'ProductSearch[place]' => 'Bathroom']) ?></div>
+                <div><?= Html::a('Soft/Fabric', ['store', 'ProductSearch[belonging]' => 'Soft/Fabric', 'ProductSearch[place]' => 'Bathroom']) ?></div>
             </div>
-            <a id="mainButton5">Kitchen</a>
+            <?= Html::a('Kitchen', ['store', 'ProductSearch[place]' => 'Kitchen'], ['id' => 'mainButton5']) ?>
             <div id="buttonList5" class="hidden">
-                <div><a href="">Large furniture</a></div>
-                <div><a href="">Small furniture</a></div>
-                <div><a href="">Dishes</a></div>
-                <div><a href="">Storage</a></div>
-                <div><a href="">Accessories</a></div>
-                <div><a href="">Soft/Fabric</a></div>
+                <div><?= Html::a('Large furniture', ['store', 'ProductSearch[belonging]' => 'Large furniture', 'ProductSearch[place]' => 'Kitchen']) ?></div>
+                <div><?= Html::a('Small furniture', ['store', 'ProductSearch[belonging]' => 'Small furniture', 'ProductSearch[place]' => 'Kitchen']) ?></div>
+                <div><?= Html::a('Dishes', ['store', 'ProductSearch[belonging]' => 'Dishes', 'ProductSearch[place]' => 'Kitchen']) ?></div>
+                <div><?= Html::a('Storage', ['store', 'ProductSearch[belonging]' => 'Storage', 'ProductSearch[place]' => 'Kitchen']) ?></div>
+                <div><?= Html::a('Accessories', ['store', 'ProductSearch[belonging]' => 'Accessories', 'ProductSearch[place]' => 'Kitchen']) ?></div>
+                <div><?= Html::a('Soft/Fabric', ['store', 'ProductSearch[belonging]' => 'Soft/Fabric', 'ProductSearch[place]' => 'Kitchen']) ?></div>
             </div>
         </div>
         <div class="thi">
@@ -130,12 +132,18 @@ use app\models\ProductSearch;
     </div>
     <div class="cart-shop">
         <div class="d5">
-            <form>
-                <input type="text" placeholder="Search...">
-                <button type="submit"></button>
-            </form>
+            <?php $form = \yii\widgets\ActiveForm::begin([
+                'action' => ['store'],
+                'method' => 'get',
+            ]); ?>
+            <?= $form->field($searchModel, 'name')->textInput(['placeholder' => 'Search...']) ?>
+            <div class="form-group">
+                <?= \yii\helpers\Html::submitButton('', ['class' => 'btn']) ?>
+            </div>
+            <?php \yii\widgets\ActiveForm::end(); ?>
         </div>
-        <h1>All products</h1>
+
+        <h1>Our products</h1>
         <p>It's easy to transform your home's interior with our large selection of accessories.</p>
         <div class="dec container2" id="product-list">
             <?php
@@ -158,7 +166,14 @@ use app\models\ProductSearch;
         var checkboxes = document.querySelectorAll('.gender-filter');
         for (var i = 0; i < checkboxes.length; i++) {
             if (checkboxes[i].checked) {
+                // Снимаем галочку со всех остальных чекбоксов
+                for (var j = 0; j < checkboxes.length; j++) {
+                    if (checkboxes[j] !== checkboxes[i]) {
+                        checkboxes[j].checked = false;
+                    }
+                }
                 checkedColors.push(checkboxes[i].id);
+                break; // Выходим из цикла, так как нужно выбрать только один цвет
             }
         }
         var url = new URL(window.location.href);

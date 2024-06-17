@@ -2,13 +2,109 @@
   margin: 0;
   padding: 0;
 }
-
+* .add-to-cart{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 460px;
+  height: 50px;
+  padding-top: 18px;
+  background-color: #323334;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+* .btn-up{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  margin-bottom: 20px;
+  width: 500px;
+  height: 50px;
+  padding-top: 18px;
+  background-color: #323334;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+* .adm .pagination{
+  display: flex;
+  justify-content: space-between;
+}
+* .adm .pagination a{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  font-size: 20px;
+  padding: 0;
+  margin-bottom: 5px;
+  color: #323334;
+  text-decoration: none;
+}
+* .form-group{
+  width: 500px;
+}
+* .product-update p{
+  margin-bottom: 0;
+}
+* .product-update #w0{
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+}
+* .product-create p{
+  margin-bottom: 0;
+}
+* .product-create #w0{
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+}
+* .emp{
+  text-align: center;
+}
+* .kor-s button{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  width: 350px;
+  height: 50px;
+  padding-top: 18px;
+  background-color: #323334;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
 * .container {
   width: 1396px;
   margin-left: auto;
   margin-right: auto;
 }
-
+* .form-group label{
+  display: none;
+}
 * .list-view .pagination{
   display: flex;
   justify-content: space-around;
@@ -136,6 +232,9 @@
 
 * body .kor .kor-f .sec-kor img {
   height: 200px;
+}
+* body .kor .kor-f .kre_kor img {
+  height: 20px;
 }
 * body .kor .kor-f .sec-kor .kors-1 {
   display: flex;
@@ -385,7 +484,7 @@
   background: transparent;
 }
 .d5 input {
-  width: 100%;
+  width: 1100px;
   height: 42px;
   padding-left: 15px;
   padding-right: 50px;

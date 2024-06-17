@@ -1,4 +1,4 @@
-<?php use yii\helpers\Html; ?>
+<?php use yii\helpers\Html; $this->title = 'MOODY.S';?>
 <main class="container">
     <div class="inf">
         <div class="inf_first">
@@ -26,7 +26,7 @@
                 <p class="com">Composition — <?= $product->сomposition ?></p>
                 <p class="com">Size — <?= $product->size ?></p>
             </div>
-            <button class="add-to-cart" data-id="1">ADD TO SHOPPING BAG</button>
+            <?= Html::a('ADD TO SHOPPING BAG', ['shopping-cart/add', 'id' => $product->id], ['class' => 'add-to-cart']) ?>
         </div>
     </div>
 </main>

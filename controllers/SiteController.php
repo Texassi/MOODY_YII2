@@ -73,8 +73,41 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionAdmin(){
+        $products = Product::find()->all();
+        return $this->render('admin', ['products' => $products]);
+    }
+
+    public function actionCreate()
+    {
+        $model = new Product();
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->id]);
+        }
+
+        return $this->render('create', [
+            'model' => $model,
+        ]);
+    }
+    public function actionUpdate($id)
+    {
+        $model = Product::findOne($id);
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['admin']);
+        }
+        return $this->render('update', ['model' => $model]);
+    }
+
+    public function actionDelete($id)
+    {
+        $model = Product::findOne($id);
+        $model->delete();
+        return $this->redirect(['admin']);
+    }
+
     public function actionCart(){
-        return $this->render('cart');
+        return $this->render('/shopping-cart/index');
     }
 
     public function actionLike(){
@@ -103,7 +136,7 @@ class SiteController extends Controller
     {
         $searchModel = new ProductSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        $dataProvider->pagination->pageSize = 18; // устанавливаем размер страницы
+        $dataProvider->pagination->pageSize = 18;
 
         return $this->render('store', [
             'searchModel' => $searchModel,
@@ -116,6 +149,7 @@ class SiteController extends Controller
         return $this->render('_product', ['productsall' => $productsall]);
 
     }
+
 
     /**
      * Login action.

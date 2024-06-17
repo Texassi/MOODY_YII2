@@ -42,6 +42,7 @@ class AppAsset extends AssetBundle
 //        'js/stars_item.js',
         'js/vxod.js',
         'js/kor.js',
+        'js/add.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

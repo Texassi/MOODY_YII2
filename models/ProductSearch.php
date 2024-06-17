@@ -7,15 +7,18 @@ use app\models\Product;
 
 class ProductSearch extends Product
 {
+    public $name;
     public $concept;
     public $gender;
     public $price;
     public $color;
+    public $place;
+    public $belonging;
 
     public function rules()
     {
         return [
-            [['concept', 'gender', 'price', 'color'], 'safe'],
+            [['name', 'concept', 'gender', 'price', 'color', 'place', 'belonging'], 'safe'],
         ];
     }
 
@@ -38,6 +41,7 @@ class ProductSearch extends Product
             return $dataProvider;
         }
 
+        $query->andFilterWhere(['like', 'name', $this->name]);
         $query->andFilterWhere(['concept' => $this->concept]);
         $query->andFilterWhere(['gender' => $this->gender]);
         if ($this->price) {
@@ -65,6 +69,13 @@ class ProductSearch extends Product
         if ($this->color) {
             $query->andFilterWhere(['color' => $this->color]);
         }
+        if ($this->place) {
+            $query->andFilterWhere(['place' => $this->place]);
+        }
+        if ($this->belonging) {
+            $query->andFilterWhere(['belonging' => $this->belonging]);
+        }
+
 
         return $dataProvider;
     }

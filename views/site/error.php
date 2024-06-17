@@ -7,7 +7,7 @@
 
 use yii\helpers\Html;
 
-$this->title = $name;
+$this->title = 'MOODY.S'
 ?>
 <div class="site-error">
 
