@@ -14,6 +14,7 @@
   margin-top: 20px;
   margin-bottom: 20px;
   display: flex;
+  justify-content: center;
   gap: 50px;
 }
 * .inf .inf_first img {

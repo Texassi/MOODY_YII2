@@ -73,7 +73,7 @@ $this->title = 'MOODY.S';
                     <p class="p2"><?= $totalPrice ?>$</p>
                 </div>
             </div>
-            <button>CONTINUE TO CHECKUOT</button>
+            <button onclick="window.location.href='<?= Yii::$app->urlManager->createUrl(['shopping-cart/checkout']) ?>'">CONTINUE TO CHECKOUT</button>
         </div>
     </div>
 </div>

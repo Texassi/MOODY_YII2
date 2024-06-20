@@ -37,7 +37,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
         <a href="<?= Url::to(['/site/index']) ?>" class="name">MOODY STUDIO</a>
         <ul class="ul_main">
             <li><a href="<?= Url::to(['/shopping-cart/index']) ?>"><img width="24px" height="28px" src="img/cart.svg" alt=""></a></li>
-            <li class="like"><a href="<?= Url::to(['/site/like']) ?>"><img width="29px" height="29px" src="img/like.svg" alt=""></a></li>
+            <li class="like"><a href="<?= Url::to(['/like/index']) ?>"><img width="29px" height="29px" src="img/like.svg" alt=""></a></li>
             <li>
                 <a href="#" id="userLink" style="display: block">
                     <img width="22px" height="29px" src="img/user.svg" alt="">

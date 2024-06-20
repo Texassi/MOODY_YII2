@@ -2,6 +2,7 @@
 
 /** @var yii\web\View $this */
 
+use yii\helpers\Html;
 use yii\helpers\Url;
 
 $this->title = 'MOODY.S';
@@ -154,7 +155,7 @@ $this->title = 'MOODY.S';
                         sed do eiusmod tempor <br>
                         incididunt ut labore et dolore <br>
                         magna aliqua.</p>
-                    <button>VIEW ALL</button>
+                    <?= Html::a('<button>VIEW ALL</button>', ['site/store', 'ProductSearch' => ['price' => '0-40']]) ?>
                 </div>
             </div>
         </div>
@@ -169,7 +170,7 @@ $this->title = 'MOODY.S';
                             <div class="popup">
                                 <a href="<?= Url::to(['/site/item', 'id' => $product->id]) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                                 <img src="img/l.svg" alt="" height="25px">
-                                <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
+                                <?= Html::a(Html::img('img/heart2.svg', ['alt' => '', 'width' => '24px', 'height' => '25px']), ['like/add', 'id' => $product->id]) ?>
                             </div>
                         </div>
                     </div>
@@ -200,7 +201,7 @@ $this->title = 'MOODY.S';
                         sed do eiusmod tempor <br>
                         incididunt ut labore et dolore <br>
                         magna aliqua.</p>
-                    <button>VIEW ALL</button>
+                    <?= Html::a('<button>VIEW ALL</button>', ['site/store', 'ProductSearch' => ['price' => '0-40']]) ?>
                 </div>
             </div>
         </div>
@@ -216,7 +217,7 @@ $this->title = 'MOODY.S';
                     </div>
                     <p>Lorem ipsum dolor sit amet, consectetur<br>
                         adipiscing elit, sed do eiusmod tempor.</p>
-                    <button>VIEW ALL</button>
+                    <?= Html::a('<button>VIEW ALL</button>', ['site/item', 'id' => 23]) ?>
                 </div>
             </div>
         </div>
@@ -246,7 +247,7 @@ $this->title = 'MOODY.S';
                             <div class="popup">
                                 <a href="<?= Url::to(['/site/item', 'id' => $product->id]) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                                 <img src="img/l.svg" alt="" height="25px">
-                                <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
+                                <?= Html::a(Html::img('img/heart2.svg', ['alt' => '', 'width' => '24px', 'height' => '25px']), ['like/add', 'id' => $product->id]) ?>
                             </div>
                         </div>
                     </div>

@@ -1,5 +1,6 @@
 <?php
 
+use yii\helpers\Html;
 use yii\helpers\Url;
 
 ?>
@@ -12,7 +13,7 @@ use yii\helpers\Url;
                 <div class="popup">
                     <a href="<?= Url::to(['/site/item', 'id' => $model->id]) ?>"><img src="img/cart2.svg" alt="" width="22px" height="24px"></a>
                     <img src="img/l.svg" alt="" height="25px">
-                    <a href=""><img src="img/heart2.svg" alt="" width="24px" height="25px"></a>
+                    <?= Html::a(Html::img('img/heart2.svg', ['alt' => '', 'width' => '24px', 'height' => '25px']), ['like/add', 'id' => $model->id]) ?>
                 </div>
             </div>
         </div>

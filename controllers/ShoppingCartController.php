@@ -1,6 +1,8 @@
 <?php
 namespace app\controllers;
 
+use app\models\Order;
+use app\models\OrderItem;
 use Yii;
 use app\models\Product;
 use app\models\ShoppingCartItem;
@@ -29,6 +31,16 @@ class ShoppingCartController extends \yii\web\Controller
             throw new NotFoundHttpException('Product not found');
         }
 
+        $existingCartItem = ShoppingCartItem::findOne([
+            'product_id' => $product->id,
+            'user_id' => Yii::$app->user->id,
+        ]);
+
+        if ($existingCartItem) {
+            Yii::$app->session->setFlash('error', 'This item is already in your cart.');
+            return $this->redirect(['shopping-cart/index']);
+        }
+
         $shoppingCart = new ShoppingCartItem();
         $shoppingCart->product_id = $product->id;
         $shoppingCart->id = $product->id;
@@ -47,6 +59,47 @@ class ShoppingCartController extends \yii\web\Controller
             return $this->render('add', ['model' => $shoppingCart]);
         }
     }
+
+    public function actionCheckout()
+    {
+        $cartItems = ShoppingCartItem::findAll(['user_id' => Yii::$app->user->id]);
+
+        if (empty($cartItems)) {
+            Yii::$app->session->setFlash('error', 'Your cart is empty.');
+            return $this->redirect(['shopping-cart/index']);
+        }
+
+        $transaction = Yii::$app->db->beginTransaction();
+        try {
+            $order = new Order();
+            $order->user_id = Yii::$app->user->id;
+            $order->total_price = array_sum(array_map(function ($item) {
+                return $item->price * $item->quantity;
+            }, $cartItems));
+            $order->save();
+
+            foreach ($cartItems as $cartItem) {
+                $orderItem = new OrderItem();
+                $orderItem->order_id = $order->id;
+                $orderItem->product_id = $cartItem->product_id;
+                $orderItem->quantity = $cartItem->quantity;
+                $orderItem->price = $cartItem->price;
+                $orderItem->save();
+
+                // Optionally clear the cart
+                $cartItem->delete();
+            }
+
+            $transaction->commit();
+            Yii::$app->session->setFlash('success', 'Order placed successfully.');
+            return $this->redirect(['site/info']);
+        } catch (\Exception $e) {
+            $transaction->rollBack();
+            Yii::$app->session->setFlash('error', 'Failed to place the order.');
+            return $this->redirect(['shopping-cart/index']);
+        }
+    }
+
 
     public function actionRemove($index)
     {

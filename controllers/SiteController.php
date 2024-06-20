@@ -83,7 +83,7 @@ class SiteController extends Controller
         $model = new Product();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['site/admin']); // перенаправляем на страницу site/admin
         }
 
         return $this->render('create', [

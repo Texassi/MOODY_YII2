@@ -2,6 +2,49 @@
   margin: 0;
   padding: 0;
 }
+* #w1-success-0{
+  width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+* #w1-success-0 .btn-close{
+  box-shadow: none;
+}
+* .button-cr{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  width: 500px;
+  height: 50px;
+  padding-top: 18px;
+  background-color: #323334;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+* .up2{
+  display: flex;
+  justify-content: right;
+  margin-bottom: 20px;
+}
+* #w1-error-0{
+    width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2px;
+    margin-top: 16px;
+}
+* #w1-error-0 button{
+  box-shadow: none;
+}
 * .add-to-cart{
   font-family: Roboto;
   font-style: normal;
@@ -108,8 +151,19 @@
 * .list-view .pagination{
   display: flex;
   justify-content: space-around;
-  /*width: 1100px;*/
   margin-bottom: 30px;
+  height: 28px;
+}
+* .list-view .pagination li{
+  background: #323334;
+  padding:1px 10px 3px 10px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #fff;
+}
+* .list-view .pagination li a{
+  color: #fff;
+  text-decoration: none;
 }
 * .list-view{
   display: grid;
@@ -222,13 +276,24 @@
   display: flex;
   flex-direction: column;
 }
+* body .kor-f2 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
 * body .kor .kor-f .sec-kor {
   display: flex;
   width: 630px;
   justify-content: space-between;
   margin-bottom: 30px;
 }
-
+* body .kor .kor-f2 .sec-kor {
+  display: flex;
+  width: 630px;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
 
 * body .kor .kor-f .sec-kor img {
   height: 200px;
@@ -240,7 +305,29 @@
   display: flex;
   gap: 20px;
 }
+* body .kor .kor-f2 .sec-kor img {
+  height: 200px;
+}
+* body .kor .kor-f2 .kre_kor img {
+  height: 20px;
+}
+* body .kor .kor-f2 .sec-kor .kors-1 {
+  display: flex;
+  gap: 20px;
+}
 * body .kor .kor-f .sec-kor h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  line-height: normal;
+  font-size: 18px;
+  font-weight: 800;
+  padding: 0;
+  margin-bottom: 10px;
+  color: #323334;
+}
+* body .kor .kor-f2 .sec-kor h2 {
   font-family: Roboto;
   font-style: normal;
   font-weight: 800;
@@ -264,7 +351,29 @@
   margin-bottom: 20px;
   color: #323334;
 }
+* body .kor .kor-f2 .sec-kor h1 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  line-height: normal;
+  font-size: 22px;
+  font-weight: 800;
+  padding: 0;
+  margin-bottom: 20px;
+  color: #323334;
+}
 * body .kor .kor-f .sec-kor p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  font-size: 18px;
+  font-weight: lighter;
+  color: #323334;
+  margin-bottom: 10px;
+}
+* body .kor .kor-f2 .sec-kor p {
   font-family: Roboto;
   font-style: normal;
   font-weight: 800;
@@ -285,6 +394,17 @@
   gap: 30px;
   /* not necessary*/
 }
+* body .kor .kor-f2 .sec-kor .about_kor {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 8px;
+}
+* body .kor .kor-f2 .sec-kor .btns-kor {
+  display: flex;
+  height: 30px;
+  gap: 30px;
+  /* not necessary*/
+}
 * body .kor .kor-f .sec-kor .btns-kor button {
   width: 50px;
   height: 50px;
@@ -297,8 +417,27 @@
   height: 20px;
   margin-top: 3px;
 }
+* body .kor .kor-f2 .sec-kor .btns-kor button {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #323334;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+* body .kor .kor-f2 .sec-kor .btns-kor button img {
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
+}
 * body .kor .kor-f .sec-kor .btns-kor input[type=number]::-webkit-inner-spin-button,
 * body .kor .kor-f .sec-kor .btns-kor input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+* body .kor .kor-f2 .sec-kor .btns-kor input[type=number]::-webkit-inner-spin-button,
+* body .kor .kor-f2 .sec-kor .btns-kor input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -319,8 +458,33 @@
   margin: auto;
   font-size: 20px;
 }
+* body .kor .kor-f2 .sec-kor .btns-kor input[type=number] {
+  -moz-appearance: textfield;
+}
+* body .kor .kor-f2 .sec-kor .btns-kor * {
+  margin: 0;
+  padding: 0;
+}
+* body .kor .kor-f2 .sec-kor .btns-kor body {
+  display: flex;
+  min-height: 100vh;
+}
+* body .kor .kor-f2 .sec-kor .btns-kor .quantity-block {
+  margin: auto;
+  font-size: 20px;
+}
 * body .kor .kor-f .sec-kor .btns-kor .quantity-arrow-minus,
 * body .kor .kor-f .sec-kor .btns-kor .quantity-arrow-plus {
+  cursor: pointer;
+  font-size: 20px;
+  padding: 5px 12px;
+  width: 40px;
+  box-sizing: border-box;
+  border: 2px solid #323334;
+  outline: none;
+}
+* body .kor .kor-f2 .sec-kor .btns-kor .quantity-arrow-minus,
+* body .kor .kor-f2 .sec-kor .btns-kor .quantity-arrow-plus {
   cursor: pointer;
   font-size: 20px;
   padding: 5px 12px;
@@ -338,7 +502,23 @@
   outline: none;
   width: 57px;
 }
+* body .kor .kor-f2 .sec-kor .btns-kor .quantity-num {
+  font-size: 20px;
+  height: 49.9px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 2px solid #323334;
+  outline: none;
+  width: 57px;
+}
 * body .kor .kor-f .sec-kor .kre_kor button {
+  width: 20px;
+  height: 20px;
+  border: 0;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+* body .kor .kor-f2 .sec-kor .kre_kor button {
   width: 20px;
   height: 20px;
   border: 0;
@@ -351,6 +531,17 @@
   margin-top: 3px;
 }
 * body .kor .kor-f .kor-tot {
+  display: flex;
+  flex-direction: column;
+  width: 653px;
+  text-align: right;
+}
+* body .kor .kor-f2 .sec-kor .kre_kor button img {
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
+}
+* body .kor .kor-f2 .kor-tot {
   display: flex;
   flex-direction: column;
   width: 653px;
@@ -369,6 +560,22 @@
   color: #323334;
 }
 * body .kor .kor-f .kor-tot .line-kor {
+  border: 1px solid #323334;
+  margin-bottom: 10px;
+}
+* body .kor .kor-f2 .kor-tot h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  line-height: normal;
+  font-size: 20px;
+  font-weight: 800;
+  padding: 0;
+  margin-bottom: 10px;
+  color: #323334;
+}
+* body .kor .kor-f2 .kor-tot .line-kor {
   border: 1px solid #323334;
   margin-bottom: 10px;
 }
